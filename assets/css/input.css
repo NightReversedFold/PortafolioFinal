@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import "tailwindcss";
+
+@theme{
+    --font-primary: 'Courier Prime'
+}
+
+.Dlist{
+    @apply transition hover:text-blue-400 cursor-pointer underline  
+}
+.SubDlist{
+    @apply pl-5 
+}
+.SelectedButton{
+    @apply text-blue-400
+}

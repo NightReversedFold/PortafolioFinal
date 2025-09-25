@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Heart's RNG
+    </title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="flex justify-center bg-[#0a0a0a] overflow-x-hidden">
+    <main class="flex flex-wrap justify-center bg-[#0a0a0a] my-5  text-sky-50 h-110 mx-5 pt-12">
+
+           <nav class="flex justify-center flex-col sm:flex-row sm:gap-x-5 gap-y-2 w-full list-none mb-10 items-center ">
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/">Ventana Principal</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/#MyStuffLol">Proyectos</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline" id="DiscordBt"><a href="">Contáctame</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/#LaboralExperience">Experiencia</a>
+            </li>
+
+        </nav>
+        <header class="flex flex-wrap h-25  py-10 w-full">
+
+            <div class="flex flex-wrap text-center justify-center w-full bg-[#111213] py-5 basis-full">
+                <h1 class="w-full text-sky-50  text-6xl sm:text-8xl underline "><a target="_blank"
+                        href="https://www.roblox.com/games/16881295182/BIG-REWORK-SOON-Hearts-RNG">Heart's RNG</a></h1>
+                <p class="pt-5">
+                    el mapa, el diseño visual de: las interfacez gráficas, los items, muchas auras, entre
+                    otras cosas fueron diseñadas por mi compañero @Danfity. Todo el código está hecho con una versión
+                    antigua
+                    de mi framework a excepción de unas pocas cosas que los dueños quisieron mantener antes de yo
+                    trabajar en el juego
+                </p>
+            </div>
+
+        </header>
+
+        <section class="sm:mt-75 mt-150 ">
+            <section>
+                <article class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col">
+                    <p>
+                        Heart's RNG es un juego hecho para un cliente, basado en otros juegos de la temática RNG;
+                        son juegos en los que todo se basa en nùmeros aleatorios y suerte. Este estilo de juego en
+                        concreto
+                        se
+                        trata
+                        conseguir auras (efectos con diferentes estilos, bailes muy luminosos, y sonidos) girando una
+                        ruleta, la cual
+                        se
+                        gira
+                        presionando el botón que dice Roll:
+                    </p>
+
+                    <figure class=" flex justify-center mt-5">
+                        <div class="flex flex-col max-w-110 max-h-110">
+                            <img class="border-2 border-white" src="/assets/gifs/heartsrng/Roll.gif" alt="">
+                        </div>
+                    </figure>
+
+                    <p class="mt-5">
+                        Tu puedes decidir si quieres quedarte el aura presionando KEEP o si no quedártela presionando
+                        TRASH
+                    </p>
+                </article>
+            </section>
+
+            <section class="">
+                <article class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col mt-10 gap-y-5">
+                    <header class="mb-10">
+                        <h2 class="text-4xl">Auras</h2>
+
+                    </header>
+
+
+                    <p class="">
+                        Cada aura tiene una probabilidad distinta de salir en la ruleta; desde la mas probable de salir
+                        con
+                        una
+                        probabilidad de 1/2
+                    <figure class=" flex justify-center ">
+                        <div class="flex flex-col max-w-70 max-h-70">
+                            <img class=" border-2 border-white"
+                                src="/assets/gifs/heartsrng/Commonly.gif" alt="">
+                        </div>
+                    </figure>
+                    hasta las mas improbable con una probabilidad de 1/1,000,000,000
+                    <figure class=" flex justify-center ">
+                        <div class="flex flex-col max-w-70 max-h-70">
+                            <img class=" border-2 border-white"
+                                src="/assets/images/heartsrng/Catastrophic.png" alt="">
+                        </div>
+                    </figure>
+                    Aqui hay un trello con todos los items y auras del juego:
+                    <strong class="underline mt-0 contents"><a
+                            href="https://trello.com/b/Uae3H3hv/official-hearts-rng-%E2%9D%A4%EF%B8%8F"
+                            target='_blank'>Trello</a></strong>
+                    </p>
+
+                    <section class="gap-y-5 flex flex-col mt-10">
+                        <p>
+                            Además de las auras de probabilidad también hay auras exclusivas que las puedes conseguir
+                            desde
+                            eventos
+                            hechos por los dueños del servidor de Discord como la Artist:
+
+                        </p>
+                        <figure class=" flex justify-center ">
+                            <div class="flex flex-col max-w-70 max-h-70">
+                                <img class=" border-2 border-white"
+                                    src="/assets/images/heartsrng/Artist.png" alt="">
+                            </div>
+                        </figure>
+
+                        <p>
+                            hasta auras que solo puedes conseguir en misiones como el aura ¨???¨
+                            misión que se desbloquea hablando con este NPC despues de haber completado su primera misión
+
+                        </p>
+                        <figure class=" flex justify-center ">
+                            <div class="flex flex-col max-w-90 max-h-90">
+                                <img class=" border-2 border-white"
+                                    src="/assets/images/heartsrng/Extra/Unknow.png" alt="">
+                            </div>
+                        </figure>
+                    </section>
+
+                </article>
+
+            </section>
+
+            <section class="">
+
+                <article class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col mt-10 gap-y-5">
+                    <header class="mb-10 gap-y-5 flex flex-col">
+                        <h2 class="text-4xl mb-10">Buffs</h2>
+                        <p>
+                            Los buffs son potenciadores que te pueden dar mas suerte o velocidad para que la ruleta
+                            gire mas rápido. Aparecen en la parte inferior derecha de la pantalla en forma de pequeños
+                            íconos con las cantidad que tienes acumulada de ese buff.
+                            Estos son acumulables, lo que significa que por ejemplo puedes tomar varias pociones que te
+                            den
+                            suerte
+                            y estos se van a ir sumando, lo que hará que tengas mucha suerte.
+                        <figure class=" flex justify-center ">
+                            <div class="flex flex-col max-w-160 max-h-160">
+                                <img class=" border-2 border-white"
+                                    src="/assets/images/heartsrng/Extra/Buffs.png" alt="">
+                            </div>
+                        </figure>
+
+                        </p>
+                    </header>
+
+
+                </article>
+
+            </section>
+
+            <section class="">
+
+                <article class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col mt-10 gap-y-5">
+                    <header class="mb-10 gap-y-5 flex flex-col">
+                        <h2 class="text-4xl mb-10">Items</h2>
+                        <p>
+                            En Heart's RNG hay una variedad de items que puedes ir recolectando en distintos puntos del
+                            mapa,
+                            los cuales van apareciendo cada cierto tiempo despues de ser recolectadas por un usuario.
+
+                            Los items se dividen en tres tipos: las auras (que ya se explicaron anteriormente) los items
+                            generales
+                            y los gears.
+
+                            Todos estos items se almacenan en el inventario del jugador; el inventario se abre de la
+                            sigueinte manera:
+
+                        <figure class=" flex justify-center ">
+                            <div class="flex flex-col max-w-100 max-h-100">
+                                <img class=" border-2 border-white"
+                                    src="/assets/gifs/heartsrng/AbrirInventario.gif" alt="">
+                            </div>
+                        </figure>
+
+                        </p>
+                    </header>
+
+                    <section class="gap-y-5 flex flex-col mt-10">
+                        <header>
+                            <h3 class="text-2xl">Items generales</h3>
+                        </header>
+                        <p>
+                            Los items generales son los que se pueden recolectar en distintos puntos del mapa
+                            ,comprar en la tienda o tradeando con otro usuario (explicados en la siguiente sección)
+                            y tienen distintos usos.
+                            La forma de usarlos es seleccionándolos y presionando el botón de usar.
+                        </p>
+
+                        <li class="list-none mt-15 gap-y-5 flex flex-col">
+                            <ul>
+                                <strong>
+                                    <p> Moneda:</p>
+                                </strong>
+                                <p>Te da 5 monedas que puedes usar en la tienda para comprar items.</p>
+
+                                <figure class=" flex justify-center ">
+                                    <div class="flex flex-col max-w-100 max-h-100">
+                                        <img class=" border-2 border-white"
+                                            src="/assets/gifs/heartsrng/Moneda.gif" alt="">
+                                    </div>
+                                </figure>
+                            </ul>
+
+                            <ul>
+                                <strong>
+                                    <p> Quick brew:</p>
+                                </strong>
+                                <p>Te da un buff el cual te da un roll extra cada 10 giros a la ruleta. El buff dura 60
+                                    segundos</p>
+
+                                <figure class=" flex justify-center ">
+                                    <div class="flex flex-col max-w-100 max-h-100">
+                                        <img class=" border-2 border-white"
+                                            src="/assets/gifs/heartsrng/QuickBrew.gif" alt="">
+                                    </div>
+                                </figure>
+                            </ul>
+
+                            <ul>
+                                <strong>
+                                    <p> Lovely brew:</p>
+                                </strong>
+                                <p>Te da un buff el cual te suma un x1 de suerte. El buff dura 60 segundos.</p>
+
+                                <figure class=" flex justify-center ">
+                                    <div class="flex flex-col max-w-100 max-h-100">
+                                        <img class=" border-2 border-white"
+                                            src="/assets/gifs/heartsrng/LovelyBrew.gif" alt="">
+                                    </div>
+                                </figure>
+                            </ul>
+                        </li>
+                    </section>
+
+                    <section class="gap-y-5 flex flex-col mt-20">
+                        <header>
+                            <h3 class="text-2xl">Gears</h3>
+                        </header>
+                        <p>
+                            Los gears son pulseras que te dan un buff dependiendo de que gear te coloques hasta que te
+                            lo
+                            quites; solo puedes
+                            llevar
+                            dos a la vez y se suman los buffs que tengas puestos entre si. Estos a diferencia de los
+                            items
+                            generales solo se pueden conseguir en la tienda o en un tradeo
+                            con otro usuario.
+                            Estos se colocan arrastrando el gear al brazo que te lo quieres poner, de esta forma:
+                        </p>
+
+                        <figure class=" flex justify-center ">
+                            <div class="flex flex-col max-w-100 max-h-100">
+                                <img class=" border-2 border-white"
+                                    src="/assets/gifs/heartsrng/GearDemostration.gif" alt="">
+                            </div>
+                        </figure>
+
+                        <p>
+                            Puedes sustituir un gear por otro sin necesidad de quitartelo:
+                        </p>
+
+                        <figure class=" flex justify-center ">
+                            <div class="flex flex-col max-w-100 max-h-100">
+                                <img class=" border-2 border-white"
+                                    src="/assets/gifs/heartsrng/GearSustitution.gif" alt="">
+                            </div>
+                        </figure>
+
+                        <li class="list-none mt-15 gap-y-5 flex flex-col">
+                            <ul>
+                                <strong>
+                                    <p> Half Heart:</p>
+                                </strong>
+                                <p>Te suma un multiplicador de x0.5 en la suerte que tengas y x0.5 en la velocidad de la
+                                    ruleta.</p>
+
+                                <figure class=" flex justify-center ">
+                                    <div class="flex flex-col max-w-100 max-h-100">
+                                        <img class=" border-2 border-white"
+                                            src="/assets/gifs/heartsrng/HalfHeart.gif" alt="">
+                                    </div>
+                                </figure>
+                            </ul>
+
+                            <ul>
+                                <strong>
+                                    <p>Heart:</p>
+                                </strong>
+                                <p>Te suma un multiplicador de x1 en la suerte que tengas y x1 en la velocidad de la
+                                    ruleta.
+                                </p>
+
+                                <figure class=" flex justify-center ">
+                                    <div class="flex flex-col max-w-100 max-h-100">
+                                        <img class=" border-2 border-white"
+                                            src="/assets/gifs/heartsrng/Heart.gif" alt="">
+                                    </div>
+                                </figure>
+                            </ul>
+
+                            <ul>
+                                <strong>
+                                    <p> Sweetheart:</p>
+                                </strong>
+                                <p>Te suma un multiplicador de x2 en la suerte que tengas y x2 en la velocidad de la
+                                    ruleta.
+                                </p>
+
+                                <figure class=" flex justify-center ">
+                                    <div class="flex flex-col max-w-100 max-h-100">
+                                        <img class=" border-2 border-white"
+                                            src="/assets/gifs/heartsrng/Sweet.gif" alt="">
+                                    </div>
+                                </figure>
+                            </ul>
+                        </li>
+                    </section>
+
+                </article>
+
+            </section>
+
+            <section class="">
+
+                <article class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col mt-10 gap-y-5">
+                    <header class="mb-10 gap-y-5 flex flex-col">
+                        <h2 class="text-4xl mb-10">Tienda</h2>
+                        <p>
+                            La tienda es lugar donde puedes comprar gears, items generales y auras en un futuro.
+                            La tienda también se divide en Items generales, Auras y Gears.
+
+
+
+                        </p>
+
+                        <figure class=" flex justify-center ">
+                            <div class="flex flex-col max-w-100 max-h-100">
+                                <img class=" border-2 border-white"
+                                    src="/assets/gifs/heartsrng/ShopDemo.gif" alt="">
+                            </div>
+                        </figure>
+                    </header>
+
+                    <p>
+                        Los items los puedes comprar con monedas
+                        y los gears se consiguen con auras; cuando tengas todas las auras tienes que craftearlas
+                        presionando el botón que dice Craft, por ejemplo:
+
+                        el gear Sweetheart se consigue con 2 auras Slime, 5 Heartful 1 Neko y 1 aura Sweetheart;
+                        significa que tengo que conseguir esas auras en la ruleta o tradeando con otros usuarios
+                        para poder conseguir esos gears. Las auras las puedo ir añadiendo mediante los voy consiguiendo
+                        o presionar el botón de Auto Add, lo que hará que cuando consiga un aura requerida para el
+                        producto
+                        se añadirá automáticamente sin yo tener que añadirla manualmente.
+
+                        Una vez crafteado el producto este se añadira al inventario en su sección correspondiente y
+                        se le quitarán las auras al jugador; como si de monedas se trataran.
+                    </p>
+
+                    <figure class=" flex justify-center ">
+                        <div class="flex flex-col max-w-100 max-h-100">
+                            <img class=" border-2 border-white"
+                                src="/assets/gifs/heartsrng/BuyingGearShop.gif" alt="">
+                        </div>
+                    </figure>
+                </article>
+
+            </section>
+
+            <section class="">
+
+                <article class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col mt-10 gap-y-5">
+                    <header class="mb-10 gap-y-5 flex flex-col">
+                        <h2 class="text-4xl mb-10">Colección</h2>
+                        <p>
+                            Además de poder almacenar auras en el inventario tambien puedes coleccionarlas, lo que
+                            significa
+                            que cada vez que obtengas un aura nueva se añadira y se desbloqueará en tu colección.
+
+                        </p>
+
+                    </header>
+
+
+                    <figure class=" flex justify-center ">
+                        <div class="flex flex-col max-w-100 max-h-100">
+                            <img class=" border-2 border-white"
+                                src="/assets/gifs/heartsrng/Coleccion.gif" alt="">
+                        </div>
+                    </figure>
+
+                </article>
+
+            </section>
+
+            <section class="">
+
+                <article class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col mt-10 gap-y-5">
+                    <header class="mb-10 gap-y-5 flex flex-col">
+                        <h2 class="text-4xl mb-10">Tradeo</h2>
+                        <p>
+                            El tradeo permite a dos jugadores intercambiar sus auras, items generales y gears.
+                            Para tradear tienes que abrir el menú presionando el logo que tiene dos flechas y enviar o
+                            recibir una solicitud de tradeo a otro jugador, y este tiene
+                            que
+                            aceptártela para poder tradear.
+                        </p>
+
+
+                        <figure class=" flex justify-center ">
+                            <div class="flex flex-col max-w-100 max-h-100">
+                                <img class="border-2 border-white"
+                                    src="/assets/gifs/heartsrng/Trading.gif" alt="">
+                            </div>
+                        </figure>
+
+                    </header>
+
+
+                    <p>
+                        Los dos jugadores tienen que presionar el botón de aceptar para que inicie una cuenta regresiba
+                        de 5
+                        segundos,
+                        la cual al terminar se intercambiarán los items.
+                        Durante esos 5 segundos los jugadores pueden cancelar el tradeo presionando Cancel si es que se
+                        arrepintieron
+                        o se les olvidó agregar algún item.
+                    </p>
+                </article>
+
+            </section>
+
+            <section class="">
+
+                <article class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col mt-10 gap-y-5">
+                    <header class="mb-10 gap-y-5 flex flex-col">
+                        <h2 class="text-4xl mb-10">Misiones</h2>
+                        <p>
+                            En Heart's RNG hay un par de misiones que puedes hacer, unas que te daran pociones y otra
+                            que te
+                            dará un aura exclusiva (la mencionada al principio de este artículo)
+                            Te pueden llegar a pedir auras, una cantidad especifica de giros en la ruleta (que se
+                            consiguen
+                            y se van acumulando por cada giro en la ruleta)
+                            hacer cosas a lo largo del mapa u otros elementos.
+                        </p>
+                    </header>
+
+                    <figure class=" flex justify-center  ">
+                        <div class="flex flex-col justify-center items-center max-w-100 max-h-100">
+                            <img class="border-2 border-white"
+                                src="/assets/gifs/heartsrng/FirstUnkMission.gif" alt="">
+                            <p>Esta por ejemplo es la primera misión, que se activa al hablar por primera vez con este
+                                NPC;
+                                te pide 50000 giros a la ruleta y 3 Heartless auras.</p>
+
+                        </div>
+                    </figure>
+                </article>
+
+            </section>
+
+            <section class="">
+
+                <article class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col mt-10 gap-y-5">
+                    <p>Hay bastantes mas cosas que hay en el juego, además de game passes y productos que puedes comprar
+                        como el inventario infinito y el quick roll (hara que los giros sean instantaneos)
+                    </p>
+                </article>
+
+            </section>
+        </section>
+        <footer class="w-full mt-90 h-full bg-[#000000] text-center text-white">
+            @NightDaFold
+        </footer>
+
+
+    </main>
+
+    <script src="/assets/js/ButtonHandler.js"></script>
+
+</body>
+
+</html>

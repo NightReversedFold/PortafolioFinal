@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo</title>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="flex justify-center bg-[#0a0a0a] overflow-x-hidden">
+    <main class="flex flex-wrap justify-center bg-[#0a0a0a] my-5  text-sky-50 h-110 mx-5 pt-12">
+        <nav class="flex justify-center flex-col sm:flex-row sm:gap-x-5 gap-y-2 w-full list-none mb-10 items-center ">
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/">Ventana Principal</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/#MyStuffLol">Proyectos</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline" id="DiscordBt"><a href="">Contáctame</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/#LaboralExperience">Experiencia</a>
+            </li>
+
+        </nav>
+
+        <header class="flex flex-wrap w-full h-25 ">
+
+            <h1 class="w-full text-sky-50 text-center text-8xl bg-[#111213]  py-10">Ludo</h1>
+
+
+        </header>
+
+        <section class=" mt-25 ">
+            <section>
+                <article class="bg-[#111213] flex flex-wrap justify-center h-150 items-center px-10 py-10">
+                    <p class="text-center font-primary ">
+                        Ludo es un juego hecho para <strong class="underline"><a target="_blank"
+                                href="https://gameofprocess.com/">ConeXion Process</a></strong> basado en un juego real
+                        llamado <strong>Parchís.</strong>
+                        El objetivo de este juego se trata de contestar cuestionarios hechos por otros jugadores y
+                        llegar
+                        primero al centro; tu también puedes crear tus propios cuestionarios y compartirlos con los
+                        demás.
+                        <br>
+                    </p>
+                    <figure class="mt-25 flex flex-col">
+                        <img class="w-100 h-60 border-2 border-white" src="/assets/images/ludo/ref.png" alt="">
+                        <p clas>Esta imagen solo hace referencia al juego de mesa original.</p>
+                    </figure>
+                </article>
+            </section>
+
+            <section class="mt-50">
+                <section
+                    class="text-center flex flex-wrap justify-center gap-y-10 font-primary bg-[#111213] px-10 py-10">
+                    <h2 class=" text-6xl ">¿Cómo jugar?</h2>
+                    <p class="mt-12.5">
+                        Primero tienes que ingresar a Roblox y descargarlo, ya sea en un dispositivo móvil u ordenador;
+                        después tienes que ingresar al siguiente link y darle click al boton de jugar: <strong><a
+                                class="underline" target="_blank"
+                                href="https://www.roblox.com/games/9265439288/Game-Of-Process-Ludo">Ludo</a></strong>
+                        <br>
+                        Dentro del juego tienes que dirigirte al centro del mapa a este lugar para empezar o unirte a
+                        una
+                        partida:
+                    </p>
+                    <figure class="basis-full flex justify-center">
+                        <img class=" border-2 border-white" src="/assets/images/ludo/tutorial1.png" alt="">
+                    </figure>
+                    <p>Una vez en el centro tienes que colocarte dentro del cuadrado; si ya
+                        hay una partida en curso te saldrá la siguiente ventanta, donde podrás elegir
+                        si crear una nueva partida en un servidor alterno con otras personas o simplemente unirte a la
+                        partida en curso:</p>
+                    <figure class="basis-full flex justify-center">
+                        <img class=" border-2 border-white" src="/assets/images/ludo/tutorial2.png" alt="">
+                    </figure>
+                    <p>Y si noy hay ninguna partida en curso una cuenta regresiva empezará;
+                        al terminar unirá a todos los jugadores que estaban en el área a una nueva partida.</p>
+                    <figure class="basis-full flex justify-center gap-x-5">
+                        <img class="border-2 border-white" src="/assets/images/ludo/tutorial3.png" alt="">
+                    </figure>
+                    <p>
+                        Pero antes de iniciar los jugadores tendrán que votar por el mapa
+                        de su interés y por el cuestionario que quieran utilizar para jugar en la partida; aparecerá una
+                        ventanta en donde puedes votar por alguno de los cuestionarios creados por los jugadores del
+                        servidor (Personales) o compartidos por otros jugadores (Públicos). Si no se vota por ningún
+                        mapa o
+                        cuestionario simplemente se eligirán al azar.
+
+                    </p>
+                    <figure class="basis-full flex justify-center gap-x-5 flex-col lg:flex-row gap-y-15 lg:gap-y-0 ">
+                        <div class="flex flex-col">
+                            <img class=" border-2 border-white" src="/assets/images/ludo/tutorial6.png"
+                                alt="">
+                            <p class="">Votación de mapa</p>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class=" border-2 border-white" src="/assets/images/ludo/tutorial4.png"
+                                alt="">
+                            <p class="">Cuestionarios personales</p>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="border-2 border-white" src="/assets/images/ludo/tutorial5.png"
+                                alt="">
+                            <p class="">Cuestionarios Públicos</p>
+                        </div>
+                    </figure>
+
+                    <p>
+                        Una vez se hayan elegido el mapa y el cuestionario se
+                        le dará el turno a un jugador al azar, tendrá 10 segundos para
+                        tirar el dado, y si no lo tira se le dará el turno al siguiente jugador
+                        (los turnos se asignan al azar al inicial la partida, pero siempre se respetará el orden de los
+                        turnos).
+                    </p>
+                    <figure>
+                        <img class=" border-2 border-white" src="/assets/images/ludo/tutorial7.png" alt="">
+                    </figure>
+                    <p>
+                        Cuando el jugador tire el dado y el dado se quede quieto, avanzará la cantidad de pasos que
+                        el dado indique y se le darán 2 puntos, y al terminar de moverse la cantidad de pasos
+                        el jugador tendrá que responder una pregunta aleatoria del cuestionario.
+                    </p>
+                    <figure>
+                        <img class=" border-2 border-white" src="/assets/images/ludo/tutorial8.png" alt="">
+                    </figure>
+                    <p>
+                        Si el jugador contesta correctamente la pregunta no pasará
+                        nada a menos de que haya otro jugador (que no sea del mismo equipo)
+                        si lo hay entonces el jugador o jugadores que estaban en la casilla
+                        (a excepción del jugador que contestó correctamente) serán dominados y volverán al inicio y
+                        perderán
+                        10 puntos y el gandor optendrá 10 puntos;
+                        si la contesta incorrectamente o no la contesta a tiempo y no hay otros jugadores de diferente
+                        equipo el jugador
+                        retrosederá la cantidad de pasos que avanzó, pero si hay uno o mas jugadores de otro equipo
+                        en esa misma casilla, entonces el jugador que contestó incorrectamente será dominado y volverá
+                        al
+                        inicio, mientras que a los otros jugadores que estaban en esa casilla se les sumará 10 puntos y
+                        al
+                        perdedor se le quitarán 10 puntos.
+                    </p>
+                    <p>
+                        Para que un jugador pueda llegar exitosamente al centro tiene que tocarle avanzar
+                        el número exacto de pasos que se necesitan para llegar a la meta, además de tener
+                        que contestar correctamente la pregunta, si le tocan mas pasos entonces llegará al centro pero
+                        retrocederá el restante de pasos.
+                    </p>
+
+                    <p>
+                        Cuando un jugador llegue a la meta (centro) la partida se acabará y se dará como victorioso al
+                        jugador que llegó, al equipo de ese jugador obtendrán todos los puntos que ganaron en la
+                        partida, y
+                        el jugador que llegó primero se le darán el doble de puntos que consiguió en la partida.
+                    </p>
+                </section>
+
+                <section class="mt-50">
+
+                    <section class="flex flex-wrap justify-center font-primary gap-y-25 px-10 py-10 bg-[#111213]">
+                        <header class="text-center basis-full">
+                            <h2 class="text-6xl">Diseños</h2>
+                        </header>
+
+                        <section>
+                            <div class="gap-y-5 flex flex-wrap justify-center">
+                                <h2 class="text-4xl">Mapas</h2>
+                                <figure
+                                    class="basis-full flex justify-center gap-x-5 flex-col lg:flex-row gap-y-15 lg:gap-y-0">
+                                    <div class="flex flex-col">
+                                        <img class=" border-2 border-white" src="/assets/images/ludo/normal.png" alt="">
+                                        <p class="">Normal</p>
+                                        <strong class="under">Hecho por: <span><a
+                                                    href="https://www.instagram.com/danrr_yht/" target='_blank'
+                                                    class="underline">@Danfity</a></span></strong>
+
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <img class=" border-2 border-white" src="/assets/images/ludo/clasico.png"
+                                            alt="">
+                                        <p class="">Clásico</p>
+                                        <strong class="under">Hecho por: <span><a
+                                                    href="https://www.instagram.com/danrr_yht/" target='_blank'
+                                                    class="underline">@Danfity</a></span></strong>
+
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <img class=" border-2 border-white" src="/assets/images/ludo/volcan.png" alt="">
+                                        <p class="">Volcan</p>
+                                        <strong class="under">Hecho por: <span><a
+                                                    href="https://www.instagram.com/danrr_yht/" target='_blank'
+                                                    class="underline">@Danfity</a></span></strong>
+
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <img class=" border-2 border-white" src="/assets/images/ludo/neon.png" alt="">
+                                        <p class="">Neon</p>
+                                        <strong class="under">Hecho por: <span><a
+                                                    href="https://www.instagram.com/danrr_yht/" target='_blank'
+                                                    class="underline">@Danfity</a></span></strong>
+                                    </div>
+                                </figure>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="gap-y-5 flex flex-wrap justify-center ">
+                                <h2 class="text-4xl">Efectos del dado</h2>
+                                <figure class="basis-full flex justify-center gap-x-5 flex-col lg:flex-row gap-y-15 lg:gap-y-0">
+                                    <div class="flex flex-col">
+                                        <img class=" border-2 border-white" src="/assets/gifs/ludo/gf1.gif" alt="">
+                                        <p class="">Fuego</p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <img class=" border-2 border-white" src="/assets/gifs/ludo/gf2.gif" alt="">
+                                        <p class="">Mano</p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <img class=" border-2 border-white" src="/assets/gifs/ludo/gf3.gif" alt="">
+                                        <p class="">Explosión</p>
+                                    </div>
+                                </figure>
+
+                            </div>
+                        </section>
+
+                    </section>
+
+                </section>
+
+            </section>
+
+        </section>
+        <footer class="w-full mt-90 h-full bg-[#000000] text-center text-white">
+            @NightDaFold
+        </footer>
+
+
+    </main>
+
+    <script type="module" src="/assets/js/ButtonHandler.js"></script>
+
+</body>
+
+</html>

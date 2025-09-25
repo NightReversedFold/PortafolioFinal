@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine System</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="flex justify-center bg-[#0a0a0a] overflow-x-hidden">
+    <main class="flex flex-wrap justify-center bg-[#0a0a0a] my-5  text-sky-50 h-110 mx-5 pt-12">
+
+         <nav class="flex justify-center flex-col sm:flex-row sm:gap-x-5 gap-y-2 w-full list-none mb-10 items-center ">
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/">Ventana Principal</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/#MyStuffLol">Proyectos</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline" id="DiscordBt"><a href="">Contáctame</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/#LaboralExperience">Experiencia</a>
+            </li>
+
+        </nav>
+        <header class="flex flex-wrap text-center justify-center w-full bg-[#111213] py-5 basis-full">
+
+
+                <h1 class="w-full text-sky-50  text-4xl sm:text-8xl ">Sistema de mina</h1>
+
+        </header>
+
+        <section class=" mt-20">
+            <section>
+                <article class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col">
+                    Este es un pequeño sistema/algoritmo que hice para generar una mina de manera automática mientras se
+                    van
+                    rompiendo
+                    bloques, para
+                    simular o dar la impresion de estar en una mina infinita; además está combinado con un sistema de
+                    Perlin
+                    noise para dar aun mejor apariencia de mina, poniendo distintos bloques de manera aleatoria (4
+                    diferentes tipos de bloques) pero con la
+                    suavidad del Perlin noise. Lo apliqué en una pequeña demo de un juego de minería.
+                    Todo el código está hecho con una versión antigua de mi framework que no está documentada.
+                </article>
+            </section>
+
+            <section class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col mt-10">
+                <p>
+
+                    En la demo puedes picar bloques con un pico, los bloques tienen "vida" la cual se va bajando
+                    poco a poco al picar, una vez que se acaba la vida el bloque disminuye su tamaño y su valor, también
+                    su
+                    vida se vuelve a llenar, pero esta
+                    vez a la mitad de lo que tenia anteriormente; llegará un punto en el que ya no lo puedas romper mas.
+                    Estos bloques los puedes
+                    manipular gracias a su drag detector (tienen que haber sido rotos al menos una vez); los puedes
+                    mover
+                    manteniendo presionado el mouse sobre el bloque y además vender en una
+                    sección que destruye los bloques; los bloques pueden tener mas o menos valor que otros, de hecho los
+                    bloques mas valiosos tienen menos probablidad de salir; este sistema de probabilidad es un sistema
+                    de
+                    probabilidad por peso.
+                    Los bloques pueden tener su propio dueño, para distinguir a quein darle el dinero al vender el
+                    bloque;
+                    el dueño se asigna presionando o arrastrando el bloque o poniéndolo en el remolque del carro del
+                    jugador.
+                    <br>
+                    Los bloques al romperse por primera vez serán llamados por un sistema que hice de Debris (para que
+                    los
+                    bloques desaparezcan despues de cierto tiempo y no estén existiendo para siempre, lo cual mejoraría
+                    el
+                    rendimiento a largo plazo) basado en promesas,
+                    este sistema se cancela una vez que los bloques se ponen en el remolque (para que no desaparezcan al
+                    estar ahi) y se vuelve a llamar cuando sale del remolque. Quité las colisiones entre los minerales
+                    para evitar lag y problemas de obstrucción.
+
+
+                    <br> <br>
+
+                    También hay una camioneta tipo pickup que hice, antes, siquiera de que hiciera este sistema, la cual
+                    está explicada por separado aqui: .
+                    Funciona como una tuneladora para minar muchos bloques a la vez, en el código se puede
+                    modificar para que se puedan picar al instante o que tengan delay al picarlos, como el pico.
+                    Los bloques los puedes arrastrar a su remolque para posteriormente llevarlos a la zona que quema los
+                    bloques y ganar dinero. el remolque tiene un límite de 10 bloques y en la parte superior de la
+                    pantalla
+                    aparecerá un texto que dice la cantidad de bloques que hay en el remolque y el límite que el
+                    remolque
+                    tiene
+                </p>
+
+                <p class="mt-5">
+                    Al iniciar el juego se genera una pared gigante de bloques los cuales puedes empezar a picar.
+                    <br>
+                </p>
+
+
+
+
+                <figure class=" flex justify-center mt-10">
+                    <div class="flex flex-col max-w-100 max-h-100">
+                        <video class="   border-white" alt="" controls>
+                            <source src="/assets/videos/minesystem/MineDemo.mp4" type="video/mp4" />
+                        </video>
+
+                    </div>
+                </figure>
+            </section>
+
+        </section>
+
+        <footer class="w-full mt-90 h-full bg-[#000000] text-center text-white">
+            @NightDaFold
+        </footer>
+
+
+    </main>
+
+    <script src="/assets/js/ButtonHandler.js"></script>
+
+</body>
+
+</html>

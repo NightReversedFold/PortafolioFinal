@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=Titulo%>
+    </title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="flex justify-center bg-[#0a0a0a] overflow-x-hidden">
+    <main class="flex flex-wrap justify-center bg-[#0a0a0a] my-5  text-sky-50 h-110 mx-40 pt-12">
+
+        <article class="flex flex-col justify-center ">
+            <nav class="flex justify-center flex-col sm:flex-row sm:gap-x-5 gap-y-2 w-full list-none mb-10 items-center ">
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/">Ventana Principal</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/#MyStuffLol">Proyectos</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline" id="DiscordBt"><a href="">Contáctame</a></li>
+            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/#LaboralExperience">Experiencia</a>
+            </li>
+
+        </nav>
+            <header class="flex flex-wrap text-center justify-center w-full bg-[#111213] py-5 basis-full">
+
+
+                <h1 class="w-full text-sky-50 text-center text-8xl  px-10 py-10">Notes</h1>
+                <a target="_blank"
+                    class="w-fit text-cyan-500 text-center text-2xl sm:text-3xl  px-10 underline transition hover:text-amber-50"
+                    href="https://github.com/NightReversedFold/Notes?tab=readme-ov-file">Repositorio de la
+                    aplicación
+                </a>
+
+
+            </header>
+            <section class="mt-25">
+                <section>
+                    <article class="bg-[#111213] flex flex-wrap justify-center  items-center px-10 py-10">
+                        <p class="text-center font-primary ">
+                            Notes es una aplicación web de notas públicas, o sea es un conteneder de notas que todo el
+                            mundo
+                            que entre
+                            a la página puede ver. Las notas se guardan en una base de datos PostgreSQL así que las
+                            notas no
+                            se pierden.
+                            Cualquiera que entre a la página puede crear y publicar su propia nota con el contenido que
+                            quiera; tienen la posibilidad
+                            de poner el autor si lo desean o si no lo ponen saldrán como "Anonymous".
+                        </p>
+
+                    </article>
+                </section>
+
+
+                <section class="bg-[#111213] flex flex-wrap justify-center items-center px-10 py-10 mt-10">
+                    <p class="text-center font-primary ">
+                        Usé socket.io para poder hacer que las notas se publiquen en tiempo real para todos los clientes
+                        activos en
+                        la página, asi que no tendrán que
+                        recargar la página para ver las notas nuevas.
+                    </p>
+                </section>
+
+                <section class="bg-[#111213] flex flex-wrap justify-center items-center px-10 py-10 mt-10 flex-col">
+                    <figure class=" flex justify-center ">
+                        <div class="flex flex-col max-w-180 max-y-180">
+                            <img class="  border-2 border-white" src="/assets/images/notes/MainPreview.png" alt="">
+                        </div>
+                    </figure>
+                    <p class="mt-5">
+                        Vista general de la aplicación con algunas notas
+                    </p>
+                </section>
+        </article>
+
+
+
+        <script src="/assets/js/ButtonHandler.js"></script>
+
+        <footer class="w-full mt-90 h-full bg-[#000000] text-center text-white">
+            @NightDaFold
+        </footer>
+
+
+    </main>
+
+    <script src="/assets/js/ButtonHandler.js"></script>
+
+</body>
+
+</html>

@@ -1,110 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Pickup
-    </title>
+    <title>Pickup | Night</title>
+    <meta name="description"
+        content="Pickup: vehículo hecho en Roblox Studio para probar los componentes y las extensiones (herencia) de mi framework, con motores hechos con HingeConstraints y PrismaticConstraints.">
+    <meta name="theme-color" content="#0a0a0a">
 
-    <link rel="stylesheet" href="/PortafolioFinal/assets/css/output.css">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Night | Portafolio">
+    <meta property="og:title" content="Pickup | Night">
+    <meta property="og:description"
+        content="Vehículo de Roblox hecho para probar los componentes y la herencia de mi framework.">
+    <meta property="og:image" content="https://nightreversedfold.github.io/PortafolioFinal/assets/images/thumbs/pickup.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
+    <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../assets/images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="../../../assets/images/apple-touch-icon.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="../../../assets/css/output.css">
 </head>
 
-<body class="flex justify-center bg-[#0a0a0a] overflow-x-hidden">
-    <main class="flex flex-wrap justify-center bg-[#0a0a0a] my-5  text-sky-50 h-110 mx-5 pt-12">
-        <nav class="flex justify-center flex-col sm:flex-row sm:gap-x-5 gap-y-2 w-full list-none mb-10 items-center ">
-            <li class="hover:text-blue-500 cursor-pointer underline"><a href="/PortafolioFinal">Ventana Principal</a>
-            </li>
-            <li class="hover:text-blue-500 cursor-pointer underline"><a
-                    href="/PortafolioFinal/#MyStuffLol">Proyectos</a></li>
-            <li class="hover:text-blue-500 cursor-pointer underline" id="DiscordBt"><a href="">Contáctame</a></li>
-            <li class="hover:text-blue-500 cursor-pointer underline"><a
-                    href="/PortafolioFinal/#LaboralExperience">Experiencia</a>
-            </li>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
+    <header class="site-header">
+        <nav class="container-page flex h-16 items-center justify-between gap-4" aria-label="Principal">
+            <a href="../../../index.html" class="brand" title="Ventana principal">Night</a>
+            <ul class="flex items-center gap-x-4 sm:gap-x-7">
+                <li><a class="nav-link" href="../../../index.html#MyStuffLol">Proyectos</a></li>
+                <li><a class="nav-link" href="../../../index.html#LaboralExperience">Experiencia</a></li>
+                <li><button type="button" class="nav-link" data-discord>Contáctame</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" class="container-page max-w-5xl pt-8">
+        <nav class="breadcrumb" aria-label="Ruta">
+            <ol>
+                <li><a href="../../../index.html">Ventana principal</a></li>
+                <li><a href="../../../index.html?tab=Extra#MyStuffLol">Proyectos</a></li>
+                <li aria-current="page">Pickup</li>
+            </ol>
         </nav>
 
-        <header class="flex flex-wrap text-center justify-center w-full bg-[#111213] py-5 basis-full">
-
-
-            <h1 class="w-full text-sky-50 text-4xl sm:text-8xl ">Pickup</h1>
-            <p class="mt-5">Gracias a <strong><a target="_blank" href="https://discord.gg/Pkfm2CWEj7">Danfity</a></strong> por el diseños de las llantas.</p>  
+        <header class="page-hero panel">
+            <p class="eyebrow">Roblox Studio · Extra</p>
+            <h1 class="page-title">Pickup</h1>
+            <p class="page-intro">
+                Gracias a
+                <a class="link" target="_blank" rel="noopener noreferrer"
+                    href="https://discord.gg/Pkfm2CWEj7">Danfity</a>
+                por el diseño de las llantas.
+            </p>
         </header>
 
+        <section class="article" aria-label="El proyecto">
+            <div class="mx-auto grid max-w-3xl items-center gap-8 sm:grid-cols-[1fr_auto]">
+                <div class="prose-night">
+                    <p>
+                        Este vehículo es un pequeño proyecto que hice para probar mi framework, específicamente los
+                        componentes y las extensiones (herencia).
+                    </p>
+                </div>
 
-
-        <section class="mt-20 ">
-            <section class="bg-[#111213] flex justify-center px-10 py-20 text-center flex-col md:flex-row ">
-                <p class="mt-20">
-                    Este vehículo es un pequeño proyecto que hice para probar mi framework, especificamente los
-                    componentes
-                    y las extensiones (herencia)
-                </p>
-
-                <figure class=" flex justify-center mt-5 ">
-                    <div class="flex flex-col">
-                        <img class="object-contain w-100 h-60  border-white"
-                            src="/PortafolioFinal/assets/images/pickup/CarComponents.png" alt="">
+                <figure class="justify-self-center">
+                    <div class="media p-4">
+                        <img class="w-auto" src="../../../assets/images/pickup/CarComponents.png" width="155"
+                            height="165" loading="lazy" decoding="async"
+                            alt="Estructura del vehículo en el Explorer de Roblox Studio: Vehicle con BgButton, BoxButton, Exp, Region, Steer y Configuration con Truck">
                     </div>
+                    <figcaption class="caption">Componentes del vehículo</figcaption>
                 </figure>
-            </section>
-
-            <section class="bg-[#111213] flex justify-center px-10 py-20 text-center mt-10 ">
-                El vehículo está hecho con HingeConstraints y PrismaticConstraints porque son los que mejor se adaptaron
-                para hacer los motores. Cada llanta tiene su propio motor
-                y están controlados desde el componente truck
-            </section>
-
-            <section class="bg-[#111213] flex justify-center px-10 py-20 text-center mt-10 ">
-                Tiene dos botones al lado del volante, el rojo para abrir la puerta del remolque y el amarillo para
-                remolcar, los dos sistemas están hechos con HingeConstraints igualmente.
-                El volante también se mueve dependiendo de la dirección del vehículo, igualmente usa un HingeConstraint
-                para
-                moverse.
-
-            </section>
-
-            <section class="bg-[#111213] flex justify-center px-10 py-20 text-center mt-10 ">
-                Tiene unas luces encima del vehículo para simular un vehículo de trabajo, al igual que unas luces
-                frontales
-                estan siempre están
-                encendidas.
-
-                Las luces traceras se encienden en rojo si el vehículo está frenando antes de ir marcha atrás, y se
-                encienden en
-                blanco cuando empieza a ir marcha atrás.
-
-            </section>
-
-
-            <section class="bg-[#111213] flex justify-center px-10 py-20 text-center mt-10 ">
-
-                <figure class=" flex justify-center">
-                    <div class="flex flex-col">
-                        <video class="  border-white" alt="" controls>
-                            <source src="/PortafolioFinal/assets/videos/pickup/CarDemov2.mp4" type="video/mp4" />
-                        </video>
-
-                    </div>
-                </figure>
-
-
-            </section>
+            </div>
         </section>
 
-       
-        <footer class="w-screen mt-90 h-20 items-center bg-[#000000] text-center text-white">
-            @NightDaFold
-        </footer>
+        <section class="article" aria-label="Cómo funciona">
+            <div class="mx-auto grid max-w-4xl gap-4 md:grid-cols-3">
+                <article class="rounded-lg border border-line bg-night p-5 sm:p-6">
+                    <h2 class="font-primary text-base text-blue-300">Motores</h2>
+                    <p class="mt-3 leading-relaxed text-neutral-300">
+                        El vehículo está hecho con HingeConstraints y PrismaticConstraints porque son los que mejor se
+                        adaptaron para hacer los motores. Cada llanta tiene su propio motor y están controlados desde el
+                        componente Truck.
+                    </p>
+                </article>
 
+                <article class="rounded-lg border border-line bg-night p-5 sm:p-6">
+                    <h2 class="font-primary text-base text-blue-300">Botones y volante</h2>
+                    <p class="mt-3 leading-relaxed text-neutral-300">
+                        Tiene dos botones al lado del volante: el rojo para abrir la puerta del remolque y el amarillo
+                        para remolcar; los dos sistemas están hechos con HingeConstraints igualmente. El volante también
+                        se mueve dependiendo de la dirección del vehículo; igualmente usa un HingeConstraint para
+                        moverse.
+                    </p>
+                </article>
 
+                <article class="rounded-lg border border-line bg-night p-5 sm:p-6">
+                    <h2 class="font-primary text-base text-blue-300">Luces</h2>
+                    <p class="mt-3 leading-relaxed text-neutral-300">
+                        Tiene unas luces encima del vehículo para simular un vehículo de trabajo, al igual que unas
+                        luces frontales que siempre están encendidas. Las luces traseras se encienden en rojo si el
+                        vehículo está frenando antes de ir marcha atrás, y se encienden en blanco cuando empieza a ir
+                        marcha atrás.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="article" aria-label="Demostración en video">
+            <figure class="mx-auto max-w-4xl">
+                <div class="media">
+                    <video controls preload="metadata" playsinline
+                        poster="../../../assets/images/pickup/Viewport.png">
+                        <source src="../../../assets/videos/pickup/CarDemov2.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este video.
+                    </video>
+                </div>
+                <figcaption class="caption">Demostración de la Pickup</figcaption>
+            </figure>
+        </section>
     </main>
 
-    <script src="/PortafolioFinal/assets/js/ButtonHandler.js"></script>
+    <footer class="site-footer">
+        <div class="container-page flex flex-col items-center gap-3 py-10 text-center">
+            <p class="font-primary text-ink">@NightDaFold</p>
+            <a href="../../../index.html?tab=Extra#MyStuffLol"
+                class="text-sm text-dim transition-colors hover:text-blue-400">← Volver a los proyectos</a>
+        </div>
+    </footer>
 
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="../../../assets/js/ButtonHandler.js" defer></script>
 </body>
 
 </html>

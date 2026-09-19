@@ -1,70 +1,51 @@
-let selected = document.querySelector(".Games")
+// Pestañas de Roblox Studio (Juegos, Frameworks y Extra)
+const tabList = document.querySelector('[role="tablist"]')
 
-const gamesButton = document.getElementById("Games")
-const FrameworksButton = document.getElementById("Frameworks")
-const ExtraButton = document.getElementById("Extra")
+if (tabList) {
+    const tabs = [...tabList.querySelectorAll('[role="tab"]')]
 
-const gamesSection = document.querySelector(".Games")
-const FrameworksSection = document.querySelector(".Frameworks")
-const ExtraSection = document.querySelector(".Extra")
+    const select = (tab, focus = false) => {
+        tabs.forEach(other => {
+            const selected = other === tab
+            other.setAttribute('aria-selected', selected)
+            other.tabIndex = selected ? 0 : -1
+            document.getElementById(other.getAttribute('aria-controls')).hidden = !selected
+        })
 
-console.log(gamesSection, FrameworksSection)
+        if (focus) tab.focus()
 
+        try {
+            sessionStorage.setItem('selectedTab', tab.id)
+        } catch { }
+    }
 
-gamesButton.addEventListener("click", () => {
-    if (selected == gamesSection) return
-    selected = gamesSection
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => select(tab))
 
-    FrameworksSection.classList.remove("opacity-100")
-    ExtraSection.classList.remove("opacity-100")
+        // Moverse entre pestañas con las flechas del teclado
+        tab.addEventListener('keydown', event => {
+            const next = {
+                ArrowRight: tabs[(index + 1) % tabs.length],
+                ArrowLeft: tabs[(index - 1 + tabs.length) % tabs.length],
+                Home: tabs[0],
+                End: tabs[tabs.length - 1],
+            }[event.key]
 
-    FrameworksSection.classList.add("hidden")
-    ExtraSection.classList.add("hidden")
+            if (!next) return
+            event.preventDefault()
+            select(next, true)
+        })
+    })
 
-    gamesSection.classList.remove("hidden")
+    // Abrir la pestaña de ?tab=Extra o la última que se usó (por ejemplo, al volver de un proyecto)
+    let saved = new URLSearchParams(location.search).get('tab')
 
-    setTimeout(() => {
-        gamesSection.classList.add("opacity-100")
-        FrameworksSection.classList.add("opacity-0")
-        ExtraSection.classList.add("opacity-0")
+    if (!saved) {
+        try {
+            saved = sessionStorage.getItem('selectedTab')
+        } catch { }
+    }
 
-    }, 50);
-})
-
-FrameworksButton.addEventListener("click", () => {
-    if (selected == FrameworksSection) return
-    selected = FrameworksSection
-
-    gamesSection.classList.remove("opacity-100")
-    ExtraSection.classList.remove("opacity-100")
-
-    gamesSection.classList.add("hidden")
-    ExtraSection.classList.add("hidden")
-
-    FrameworksSection.classList.remove("hidden")
-    setTimeout(() => {
-        FrameworksSection.classList.add("opacity-100")
-        gamesSection.classList.add("opacity-0")
-        ExtraSection.classList.add("opacity-0")
-
-    }, 50);
-})
-
-ExtraButton.addEventListener("click", () => {
-    if (selected == ExtraSection) return
-    selected = ExtraSection
-
-    gamesSection.classList.remove("opacity-100")
-    FrameworksSection.classList.remove("opacity-100")
-
-    gamesSection.classList.add("hidden")
-    FrameworksSection.classList.add("hidden")
-
-    ExtraSection.classList.remove("hidden")
-    setTimeout(() => {
-        ExtraSection.classList.add("opacity-100")
-        gamesSection.classList.add("opacity-0")
-        FrameworksSection.classList.add("opacity-0")
-
-    }, 50);
-})
+    const savedTab = tabs.find(tab => tab.id === saved)
+    if (savedTab) select(savedTab)
+}

@@ -1,273 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        User app
-    </title>
+    <title>Gestor de usuarios | Night</title>
+    <meta name="description"
+        content="Gestor de usuarios por consola hecho en Python: agrega, edita, elimina y busca contactos guardados en una base de datos JSON.">
+    <meta name="theme-color" content="#0a0a0a">
 
-    <link rel="stylesheet" href="/PortafolioFinal/assets/css/output.css">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Night | Portafolio">
+    <meta property="og:title" content="Gestor de usuarios | Night">
+    <meta property="og:description"
+        content="Aplicación de consola en Python para agregar, editar, eliminar y buscar contactos.">
+    <meta property="og:image"
+        content="https://nightreversedfold.github.io/PortafolioFinal/assets/images/thumbs/usuarios.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
+    <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../assets/images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="../../../assets/images/apple-touch-icon.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="../../../assets/css/output.css">
 </head>
 
-<body class="flex justify-center bg-[#0a0a0a] overflow-x-hidden">
-    <main class="flex flex-wrap justify-center bg-[#0a0a0a] my-5  text-sky-50 h-110 mx-40 pt-12">
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-        <article class="flex flex-col justify-center ">
-            <nav
-                class="flex justify-center flex-col sm:flex-row sm:gap-x-5 gap-y-2 w-full list-none mb-10 items-center ">
-                <li class="hover:text-blue-500 cursor-pointer underline"><a href="/PortafolioFinal">Ventana
-                        Principal</a></li>
-                <li class="hover:text-blue-500 cursor-pointer underline"><a
-                        href="/PortafolioFinal/#MyStuffLol">Proyectos</a></li>
-                <li class="hover:text-blue-500 cursor-pointer underline" id="DiscordBt"><a href="">Contáctame</a></li>
-                <li class="hover:text-blue-500 cursor-pointer underline"><a
-                        href="/PortafolioFinal/#LaboralExperience">Experiencia</a>
-                </li>
+    <header class="site-header">
+        <nav class="container-page flex h-16 items-center justify-between gap-4" aria-label="Principal">
+            <a href="../../../index.html" class="brand" title="Ventana principal">Night</a>
+            <ul class="flex items-center gap-x-4 sm:gap-x-7">
+                <li><a class="nav-link" href="../../../index.html#MyStuffLol">Proyectos</a></li>
+                <li><a class="nav-link" href="../../../index.html#LaboralExperience">Experiencia</a></li>
+                <li><button type="button" class="nav-link" data-discord>Contáctame</button></li>
+            </ul>
+        </nav>
+    </header>
 
-            </nav>
-            <header class="flex flex-wrap text-center justify-center w-full bg-[#111213] py-5 basis-full">
+    <main id="contenido" class="container-page max-w-5xl pt-8">
+        <nav class="breadcrumb" aria-label="Ruta">
+            <ol>
+                <li><a href="../../../index.html">Ventana principal</a></li>
+                <li><a href="../../../index.html#MyStuffLol">Proyectos</a></li>
+                <li aria-current="page">Gestor de usuarios</li>
+            </ol>
+        </nav>
 
-
-                <h1 class="w-full text-sky-50 text-center text-4xl sm:text-8xl  px-10 py-10">Gestor de usuarios</h1>
-                <a target="_blank"
-                    class="w-fit text-cyan-500 text-center  text-2xl sm:text-3xl px-10 underline transition hover:text-amber-50"
-                    href="https://github.com/NightReversedFold/Gestor-de-usuarios">Repositorio del programa en
-                    GitHub
+        <header class="page-hero panel">
+            <p class="eyebrow">Python</p>
+            <h1 class="page-title">Gestor de usuarios</h1>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a class="btn btn-primary" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/NightReversedFold/Gestor-de-usuarios/releases/tag/v1.0">
+                    Descargar el ejecutable para probarlo
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 11 11 5M6 5h5v5" />
+                    </svg>
                 </a>
-                <a class="w-fit text-amber-500 text-center text-2xl sm:text-3xl  px-10 underline transition hover:text-emerald-50"
-                    target="_blank"
-                    href="https://github.com/NightReversedFold/Gestor-de-usuarios/releases/tag/v1.0">Descargar el
-                    ejecutable para probarlo</a>
-            </header>
+                <a class="btn" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/NightReversedFold/Gestor-de-usuarios">
+                    Repositorio del programa en GitHub
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 11 11 5M6 5h5v5" />
+                    </svg>
+                </a>
+            </div>
+        </header>
 
-            <section class="mt-35">
-                <section>
-                    <article class="bg-[#111213] flex flex-wrap justify-center  items-center px-10 py-10">
-                        <p class="text-center font-primary ">
-                            Esta pequeña aplicación permite simular un gestor de contactos, en donde puedes agregar,
-                            eliminar, y
-                            editar "contactos".
-                            Todos los datos se guardan en una base de datos en formato JSON en la misma carpeta de la
-                            aplicación.
-                        </p>
+        <nav class="toc" aria-label="En esta página">
+            <a href="#ventanas">Ventanas</a>
+            <a href="#estructura">Estructura del programa</a>
+        </nav>
 
-                    </article>
-                </section>
+        <section class="article" aria-label="Qué es">
+            <div class="prose-night mx-auto">
+                <p>
+                    Esta pequeña aplicación permite simular un gestor de contactos, en donde puedes agregar, eliminar y
+                    editar “contactos”. Todos los datos se guardan en una base de datos en formato JSON en la misma
+                    carpeta de la aplicación.
+                </p>
+            </div>
+        </section>
 
-                <section class="mt-40 ">
-                    <div
-                        class="text-center flex flex-col items-center justify-center font-primary bg-[#111213] px-10 py-10">
-                        <header>
-                            <h2 class=" text-6xl ">Ventanas</h2>
-                        </header>
+        <!-- Ventanas -->
+        <section id="ventanas" class="article">
+            <div class="mx-auto max-w-3xl">
+                <h2 class="article-title">Ventanas</h2>
 
-                        <section class="flex flex-col gap-y-5">
-                            <h3 class="text-3xl mt-30">
-                                Ventana principal
-                            </h3>
-
+                <div class="mt-12 space-y-16">
+                    <section>
+                        <h3 class="article-subtitle">Ventana principal</h3>
+                        <div class="prose-night mt-4">
                             <p>
                                 Está primero la ventana principal; esta ventana se muestra para que selecciones la
-                                acción
-                                que
-                                quieres realizar.
-                                Hay 6 opciones: Agregar usuario, Editar usuario, Eliminar usuario, Obtener Usuario,
-                                Obtener
-                                Usuarios
-                                y Salir.
-
-                                Las entradas para las respuestas se irán pidiendo conforme se vayan respondiendo.
+                                acción que quieres realizar. Hay 6 opciones: Agregar usuario, Editar usuario, Eliminar
+                                usuario, Obtener usuario, Obtener usuarios y Salir.
                             </p>
+                            <p>Las entradas para las respuestas se irán pidiendo conforme se vayan respondiendo.</p>
+                        </div>
+                        <figure class="mt-6">
+                            <div class="media grid place-items-center p-5 sm:p-8">
+                                <img class="w-auto max-w-full" src="../../../assets/images/userapp/Principal.png"
+                                    width="291" height="274" loading="lazy" decoding="async"
+                                    alt="Menú principal en la consola con las opciones: Agregar Usuario (1), Editar Usuario (2), Eliminar Usuario (3), Obtener Usuario (4), Obtener Usuarios (5) y Salir (6)">
+                            </div>
+                        </figure>
+                    </section>
 
-                            <figure class="basis-full flex justify-center">
-                                <img class="w-100 h-60 border-1 border-white object-scale-down"
-                                    src="/PortafolioFinal/assets/images/userapp/Principal.png" alt="">
-                            </figure>
-                        </section>
-
-
-                        <section class="flex flex-col gap-y-5">
-                            <h3 class="text-3xl mt-30">
-                                Agregar usuario
-                            </h3>
-
-
-                            <figure class="basis-full flex justify-center">
-                                <img class="w-100 h-60 border-1 border-white object-none"
-                                    src="/PortafolioFinal/assets/images/userapp/AgregarUsuario.png" alt="">
-                            </figure>
-
+                    <section>
+                        <h3 class="article-subtitle">Agregar usuario</h3>
+                        <figure class="mt-6">
+                            <div class="media grid place-items-center p-5 sm:p-8">
+                                <img class="w-auto max-w-full" src="../../../assets/images/userapp/AgregarUsuario.png"
+                                    width="271" height="219" loading="lazy" decoding="async"
+                                    alt="Consola pidiendo los datos para agregar un usuario">
+                            </div>
+                        </figure>
+                        <div class="prose-night mt-6">
                             <p>
-                                si se deja algun campo vacio aparecerá "Campo vacio" a la hora de mostrar el
-                                usuario/usuarios.
-                                <br>
-                                la aplicación dará la opción de agregar otro usuario al terminar de agregar uno.
-
+                                Si se deja algún campo vacío, aparecerá <code class="code">Campo vacio.</code> a la hora
+                                de mostrar el usuario/usuarios.
                             </p>
+                            <p>La aplicación dará la opción de agregar otro usuario al terminar de agregar uno.</p>
+                        </div>
+                    </section>
 
+                    <section>
+                        <h3 class="article-subtitle">Editar usuario</h3>
+                        <figure class="mt-6">
+                            <div class="media grid place-items-center p-5 sm:p-8">
+                                <img class="w-auto max-w-full" src="../../../assets/images/userapp/EditarUsuario.png"
+                                    width="440" height="244" loading="lazy" decoding="async"
+                                    alt="Menú de la consola para elegir qué propiedad del usuario editar">
+                            </div>
+                        </figure>
+                        <div class="prose-night mt-6">
                             <p>
+                                Al elegir esta opción, se le pedirá al usuario que ponga el nombre, correo o número de
+                                teléfono del contacto que se quiere editar; una vez que la aplicación lo encuentre,
+                                aparecerá el menú de la imagen de arriba para que se seleccione la propiedad del usuario
+                                que se quiere modificar. Al terminar de editar la propiedad, se le preguntará al usuario
+                                si desea editar otra propiedad.
                             </p>
-                        </section>
+                        </div>
+                    </section>
 
-
-                        <section class="flex flex-col gap-y-5">
-                            <h3 class="text-3xl mt-30">
-                                Editar usuario
-                            </h3>
-
-                            <figure class="basis-full flex justify-center">
-                                <img class="w-100 h-60 border-1 border-white object-fill"
-                                    src="/PortafolioFinal/assets/images/userapp/EditarUsuario.png" alt="">
-                            </figure>
-
+                    <section>
+                        <h3 class="article-subtitle">Eliminar usuario</h3>
+                        <figure class="mt-6">
+                            <div class="media grid place-items-center p-5 sm:p-8">
+                                <img class="w-auto max-w-full"
+                                    src="../../../assets/images/userapp/EliminarUsuario.png" width="469" height="90"
+                                    loading="lazy" decoding="async"
+                                    alt="Consola pidiendo confirmar si realmente se quiere eliminar el usuario">
+                            </div>
+                        </figure>
+                        <div class="prose-night mt-6">
                             <p>
-                                Al elejir esta opción se le pedirá al usuario que ponga el nombre, correo o número
-                                de teléfono del contacto que se quiere editar,
-                                una vez que la aplicación lo encuentre aparecerá el menú de la imagen de arriba para que
-                                se seleccione la propiedad del usuario que se quiere modificar.
-                                al terminar de editar la propiedad se le preguntará al usuario si desea editar otra
-                                propiedad.
+                                Al elegir esta opción, se le pedirá igualmente al usuario que ingrese el usuario que
+                                desea eliminar mediante el nombre, correo o número de teléfono; si es que se encuentra,
+                                se le pedirá confirmar si realmente quiere eliminarlo.
                             </p>
+                        </div>
+                    </section>
 
-
-                        </section>
-
-                        <section class="flex flex-col gap-y-5">
-                            <h3 class="text-3xl mt-30">
-                                Eliminar usuario
-                            </h3>
-
-
-                            <figure class="basis-full flex justify-center">
-                                <img class="w-100 h-60 border-1 border-white object-contain"
-                                    src="/PortafolioFinal/assets/images/userapp/EliminarUsuario.png" alt="">
-                            </figure>
-
+                    <section>
+                        <h3 class="article-subtitle">Obtener usuario</h3>
+                        <figure class="mt-6">
+                            <div class="media grid place-items-center p-5 sm:p-8">
+                                <img class="w-auto max-w-full" src="../../../assets/images/userapp/ObtenerUsuario.png"
+                                    width="500" height="143" loading="lazy" decoding="async"
+                                    alt="Tabla en la consola con la información completa de un usuario">
+                            </div>
+                        </figure>
+                        <div class="prose-night mt-6">
                             <p>
-                                Al elejir esta opción se le pedirá igualmente al usuario que ingrese el usuario que
-                                desea eliminar mediante el nombre, correo o número de teléfono;
-                                si es que se encuentra se le pedirá confirmar si realmente quiere eliminarlo.
-                            </p>
-                        </section>
-
-                        <section class="flex flex-col gap-y-5">
-                            <h3 class="text-3xl mt-30">
-                                Obtener usuario
-                            </h3>
-
-                            <figure class="basis-full flex justify-center">
-                                <img class="w-100 h-60 border-1 border-white object-contain"
-                                    src="/PortafolioFinal/assets/images/userapp/ObtenerUsuario.png" alt="">
-                            </figure>
-
-                            <p>
-                                esta opción simplemente muestra la información completa de un usuario, la entrada pide
+                                Esta opción simplemente muestra la información completa de un usuario; la entrada pide
                                 que se ingrese el nombre, correo o teléfono del usuario del que se desea obtener
                                 información, al igual que las otras opciones.
                             </p>
-
-
-                        </section>
-
-                        <section class="flex flex-col gap-y-5">
-                            <h3 class="text-3xl mt-30">
-                                Obtener usuarios
-                            </h3>
-
-
-                            <figure class="basis-full flex justify-center">
-                                <img class="w-100 h-60 border-1 border-white object-fill"
-                                    src="/PortafolioFinal/assets/images/userapp/ObtenerUsuarios.png" alt="">
-                            </figure>
-
-                            <p>
-                                Esta opción muestra todos los contactos registrados en la base de datos.
-                            </p>
-                        </section>
-
-
-                    </div>
-
-
-                </section>
-
-                <section class="mt-40">
-                    <div class="text-center flex flex-wrap justify-center  font-primary bg-[#111213] px-10 py-10">
-                        <div class="">
-                            <header>
-                                <h2 class=" text-4xl ">Acerca de la estructura del programa</h2>
-                            </header>
-
-
-                            <p class="mt-5">
-                                El programa está estructurado en 3 clases principales, cada una en un archivo diferente;
-                                la
-                                clase <code class="bg-neutral-800 p-1">Usuario.py</code>
-                                la clase <code class="bg-neutral-800 p-1">ManejadorDeVentana.py</code> y la clase <code
-                                    class="bg-neutral-800 p-1"> GestorDeUsuarios.py</code>
-                                Solamente utilicé un módulo externo llamado <a target="_blank"
-                                    href="https://pypi.org/project/tabulate/" class="underline">Tabulate</a> para poder
-                                imprimir la información en formato de
-                                tablas.
-
-                                Todo el programa está orientado a objetos, cada cosa separada por esas clases para
-                                mantener
-                                todo muy limpio y escalable.
-
-                                <br><br>
-                                El manejador de ventana se encarga de imprimir y manejar las funcionalidades del
-                                GestorDeUsuarios.
-
-                                <br><br><br>
-
-                                El gestor de usuarios se encarga de almacenar en la base de datos los usuarios, al igual
-                                que
-                                cargarlos en un array de <code class="bg-neutral-800 p-1">Usuarios</code> y gestionar
-                                todo
-                                lo
-                                que tenga que ver con usuarios, como crearlos, eliminarlos, buscar usuarios que
-                                coincidan
-                                con la
-                                información que se le de a la función etc.
-                                <br><br><br>
-
-                                La clase Usuario simplemente se encarga de manejar los setters y los getters del
-                                usuario, y
-                                unas
-                                funcionalidades extra como comparar información para checar si coincide con alguno de
-                                los
-                                datos
-                                de la clase.
-                            </p>
-
-
                         </div>
+                    </section>
 
+                    <section>
+                        <h3 class="article-subtitle">Obtener usuarios</h3>
+                        <figure class="mt-6">
+                            <div class="media grid place-items-center p-5 sm:p-8">
+                                <img class="w-auto max-w-full"
+                                    src="../../../assets/images/userapp/ObtenerUsuarios.png" width="702" height="238"
+                                    loading="lazy" decoding="async"
+                                    alt="Tabla en la consola con todos los contactos registrados">
+                            </div>
+                        </figure>
+                        <div class="prose-night mt-6">
+                            <p>Esta opción muestra todos los contactos registrados en la base de datos.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estructura -->
+        <section id="estructura" class="article">
+            <div class="mx-auto max-w-3xl">
+                <h2 class="article-title">Acerca de la estructura del programa</h2>
+
+                <div class="prose-night mt-6">
+                    <p>
+                        El programa está estructurado en 3 clases principales, cada una en un archivo diferente: la
+                        clase <code class="code">Usuario.py</code>, la clase
+                        <code class="code">ManejadorDeVentana.py</code> y la clase
+                        <code class="code">GestorDeUsuarios.py</code>. Solamente utilicé un módulo externo llamado
+                        <a target="_blank" rel="noopener noreferrer" href="https://pypi.org/project/tabulate/">Tabulate</a>
+                        para poder imprimir la información en formato de tablas.
+                    </p>
+                    <p>
+                        Todo el programa está orientado a objetos, cada cosa separada por esas clases para mantener todo
+                        muy limpio y escalable.
+                    </p>
+                </div>
+
+                <dl class="mt-10 grid gap-4">
+                    <div class="rounded-lg border border-line bg-night p-5 sm:p-6">
+                        <dt><code class="code">ManejadorDeVentana.py</code></dt>
+                        <dd class="mt-3 leading-relaxed text-neutral-300">
+                            El manejador de ventana se encarga de imprimir y manejar las funcionalidades del
+                            GestorDeUsuarios.
+                        </dd>
                     </div>
-
-
-                </section>
-
-            </section>
-        </article>
-
-
-
-        <script src="/PortafolioFinal/assets/js/ButtonHandler.js"></script>
-
-       
-        <footer class="w-screen mt-90 h-20 items-center bg-[#000000] text-center text-white">
-            @NightDaFold
-        </footer>
-
+                    <div class="rounded-lg border border-line bg-night p-5 sm:p-6">
+                        <dt><code class="code">GestorDeUsuarios.py</code></dt>
+                        <dd class="mt-3 leading-relaxed text-neutral-300">
+                            El gestor de usuarios se encarga de almacenar en la base de datos los usuarios, al igual que
+                            cargarlos en un array de <code class="code">Usuarios</code> y gestionar todo lo que tenga
+                            que ver con usuarios, como crearlos, eliminarlos, buscar usuarios que coincidan con la
+                            información que se le dé a la función, etc.
+                        </dd>
+                    </div>
+                    <div class="rounded-lg border border-line bg-night p-5 sm:p-6">
+                        <dt><code class="code">Usuario.py</code></dt>
+                        <dd class="mt-3 leading-relaxed text-neutral-300">
+                            La clase Usuario simplemente se encarga de manejar los setters y los getters del usuario, y
+                            unas funcionalidades extra, como comparar información para checar si coincide con alguno de
+                            los datos de la clase.
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
     </main>
 
-    <script src="/PortafolioFinal/assets/js/ButtonHandler.js"></script>
+    <footer class="site-footer">
+        <div class="container-page flex flex-col items-center gap-3 py-10 text-center">
+            <p class="font-primary text-ink">@NightDaFold</p>
+            <a href="../../../index.html#MyStuffLol" class="text-sm text-dim transition-colors hover:text-blue-400">←
+                Volver a los proyectos</a>
+        </div>
+    </footer>
 
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="../../../assets/js/ButtonHandler.js" defer></script>
 </body>
 
 </html>

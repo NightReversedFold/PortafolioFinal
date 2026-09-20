@@ -78,9 +78,9 @@
                     curso, la entrega de los certificados y el envío de las encuestas de satisfacción.
                 </p>
                 <p>
-                    La aplicación es multiempresa: en una misma instalación conviven varias OTEC, y cada una tiene sus
-                    propios usuarios, empresas, cursos, logo, certificador y numeración. Una OTEC no ve la información
-                    de las demás.
+                    La aplicación es multiempresa: en una misma instalación pueden convivir varias OTEC, y todas
+                    tienen sus propios usuarios, empresas, cursos, logo, certificador y numeración. Las OTEC no pueden
+                    ver la información de las demás.
                 </p>
             </div>
 
@@ -99,8 +99,8 @@
 
                 <div class="prose-night mt-6">
                     <p>
-                        La aplicación tiene cinco roles. Un usuario puede tener varios roles a la vez y pertenecer a más
-                        de una OTEC; la barra lateral muestra únicamente las secciones que corresponden a sus roles.
+                        La aplicación tiene cinco roles. Los usuarios pueden tener varios roles a la vez y pertenecer a
+                        más de una OTEC; la barra lateral muestra únicamente las secciones que corresponden a sus roles.
                     </p>
                 </div>
 
@@ -108,46 +108,47 @@
                     <div class="rounded-lg border border-line bg-night p-5 sm:p-6">
                         <dt><code class="code">ALUMNO</code></dt>
                         <dd class="mt-3 leading-relaxed text-neutral-300">
-                            Consulta los cursos en los que está inscrito y su temario, marca su asistencia y abre sus
-                            certificados.
+                            Puede consultar los cursos en los que está inscrito y su temario, marcar su asistencia y
+                            abrir sus certificados.
                         </dd>
                     </div>
                     <div class="rounded-lg border border-line bg-night p-5 sm:p-6">
                         <dt><code class="code">PROFESOR</code></dt>
                         <dd class="mt-3 leading-relaxed text-neutral-300">
-                            Inicia y termina la clase, registra las asistencias y las notas de los alumnos de sus cursos
-                            y finaliza el curso.
+                            Puede iniciar y terminar la clase, registrar las asistencias y las notas de los alumnos de
+                            sus cursos, y finalizar el curso.
                         </dd>
                     </div>
                     <div class="rounded-lg border border-line bg-night p-5 sm:p-6">
                         <dt><code class="code">EMPRESA</code></dt>
                         <dd class="mt-3 leading-relaxed text-neutral-300">
-                            Consulta los cursos que la OTEC dictó a su empresa y los alumnos inscritos en cada uno.
+                            Puede consultar los cursos que la OTEC dictó a su empresa y los alumnos inscritos en cada
+                            uno.
                         </dd>
                     </div>
                     <div class="rounded-lg border border-line bg-night p-5 sm:p-6">
                         <dt><code class="code">ADMINISTRADOREMPRESA</code></dt>
                         <dd class="mt-3 leading-relaxed text-neutral-300">
-                            Administra una OTEC: sus usuarios, sus empresas, su catálogo de cursos, sus cotizaciones y
-                            sus parámetros.
+                            Puede administrar una OTEC: sus usuarios, sus empresas, su catálogo de cursos, sus
+                            cotizaciones y sus parámetros.
                         </dd>
                     </div>
                     <div class="rounded-lg border border-line bg-night p-5 sm:p-6 md:col-span-2">
                         <dt><code class="code">ADMINISTRADOR</code></dt>
                         <dd class="mt-3 leading-relaxed text-neutral-300">
-                            Rol global. Accede a cualquier OTEC, crea suscripciones nuevas desde el panel de
-                            administradores y vincula usuarios a ellas.
+                            Rol global. Puede acceder a cualquier OTEC, crear suscripciones nuevas desde el panel de
+                            administradores y vincular usuarios a ellas.
                         </dd>
                     </div>
                 </dl>
 
                 <div class="prose-night mt-10">
                     <p>
-                        Las cuentas no se crean por registro público. El administrador crea al usuario dentro de la
-                        OTEC y el usuario activa su cuenta desde la pantalla de inicio de sesión: escribe su correo,
-                        define su contraseña y recibe por correo un enlace de confirmación con fecha de vencimiento.
-                        La contraseña se guarda cifrada con bcrypt. La misma pantalla incluye la recuperación de
-                        contraseña por correo.
+                        Las cuentas no se pueden crear por registro público. Los administradores pueden crear al
+                        usuario dentro de la OTEC, y el usuario puede activar su cuenta desde la pantalla de inicio de
+                        sesión: escribe su correo, define su contraseña y recibe por correo un enlace de confirmación
+                        con fecha de vencimiento. La contraseña se guarda cifrada con bcrypt. Desde la misma pantalla
+                        también se puede recuperar la contraseña por correo.
                     </p>
                 </div>
 
@@ -191,18 +192,18 @@
                         <h3 class="article-subtitle">Gestionar cursos</h3>
                         <div class="prose-night mt-4">
                             <p>
-                                Cada tarjeta de esta sección es un curso armado, es decir, un curso del catálogo
-                                asignado a una empresa en unas fechas determinadas. La sección tiene un buscador por
+                                Las tarjetas de esta sección son cursos armados, es decir, cursos del catálogo
+                                asignados a una empresa en unas fechas determinadas. La sección tiene un buscador por
                                 ID, nombre del curso o nombre de la empresa, catorce criterios de ordenamiento y una
-                                selección múltiple para eliminar varios cursos armados a la vez. Cada tarjeta muestra
-                                el estado del curso armado y si está cotizado.
+                                selección múltiple que permite eliminar varios cursos armados a la vez. Las tarjetas
+                                muestran el estado del curso armado y si está cotizado.
                             </p>
                         </div>
                         <figure class="mt-6">
                             <a class="media" href="../../../assets/images/otec/panel-cursos.png">
                                 <img src="../../../assets/images/otec/panel-cursos.png" width="3200" height="1900"
                                     loading="lazy" decoding="async"
-                                    alt="Sección Gestionar cursos con cuatro tarjetas de cursos armados; cada una muestra el curso, la empresa, el estado, si está cotizado, la fecha de inicio y la cantidad de alumnos">
+                                    alt="Sección Gestionar cursos con cuatro tarjetas de cursos armados, con el curso, la empresa, el estado, si está cotizado, la fecha de inicio y la cantidad de alumnos">
                             </a>
                             <figcaption class="caption">Sección Gestionar cursos</figcaption>
                         </figure>
@@ -215,20 +216,20 @@
                                 Las tres secciones tienen la misma estructura: buscador, ordenamiento, selección
                                 múltiple y un panel lateral para editar el registro seleccionado. Las tres permiten
                                 importar registros desde un archivo Excel. Al cargar el archivo, la aplicación lee los
-                                encabezados de la primera fila y muestra un selector para indicar a qué campo
+                                encabezados de la primera fila y muestra un selector donde se puede indicar a qué campo
                                 corresponde cada columna.
                             </p>
                             <p>
                                 Al terminar la importación, la aplicación muestra un reporte con los registros que no
-                                se crearon y el motivo de cada uno, por ejemplo un RUT repetido o una fila sin datos.
-                                Los registros válidos del archivo se crean igual.
+                                se pudieron crear y el motivo de cada uno, por ejemplo un RUT repetido o una fila sin
+                                datos. Los registros válidos del archivo se crean igual.
                             </p>
                         </div>
                         <figure class="mt-6">
                             <a class="media" href="../../../assets/images/otec/panel-usuarios.png">
                                 <img src="../../../assets/images/otec/panel-usuarios.png" width="3200" height="1900"
                                     loading="lazy" decoding="async"
-                                    alt="Sección Usuarios con el área para importar desde Excel y las tarjetas de los seis usuarios de la OTEC, cada una con su ID, su correo y su RUT">
+                                    alt="Sección Usuarios con el área para importar desde Excel y las tarjetas de los seis usuarios de la OTEC con su ID, su correo y su RUT">
                             </a>
                             <figcaption class="caption">Sección Usuarios</figcaption>
                         </figure>
@@ -237,7 +238,7 @@
                                 <a class="media" href="../../../assets/images/otec/panel-empresas.png">
                                     <img src="../../../assets/images/otec/panel-empresas.png" width="3200"
                                         height="1900" loading="lazy" decoding="async"
-                                        alt="Sección Empresas con cuatro empresas clientes, cada una con su ID y su RUT">
+                                        alt="Sección Empresas con cuatro empresas clientes con su ID y su RUT">
                                 </a>
                                 <figcaption class="caption">Sección Empresas</figcaption>
                             </figure>
@@ -245,7 +246,7 @@
                                 <a class="media" href="../../../assets/images/otec/panel-catalogo.png">
                                     <img src="../../../assets/images/otec/panel-catalogo.png" width="3200"
                                         height="1900" loading="lazy" decoding="async"
-                                        alt="Sección Cursos con el catálogo de cuatro cursos y la duración en horas de cada uno">
+                                        alt="Sección Cursos con el catálogo de cuatro cursos y su duración en horas">
                                 </a>
                                 <figcaption class="caption">Sección Cursos</figcaption>
                             </figure>
@@ -256,9 +257,9 @@
                         <h3 class="article-subtitle">Reportes de cursos</h3>
                         <div class="prose-night mt-4">
                             <p>
-                                Esta sección muestra todos los cursos armados de la OTEC en una tabla, con filtros por
-                                fecha de inicio, fecha de finalización, estado, si está cotizado, empresa, usuario y
-                                curso.
+                                Esta sección muestra todos los cursos armados de la OTEC en una tabla, que se puede
+                                filtrar por fecha de inicio, fecha de finalización, estado, si está cotizado, empresa,
+                                usuario y curso.
                             </p>
                         </div>
                         <figure class="mt-6">
@@ -275,12 +276,12 @@
                         <h3 class="article-subtitle">Parametros</h3>
                         <div class="prose-night mt-4">
                             <p>
-                                En esta sección se configura lo que distingue a cada OTEC: el logo, el usuario que
-                                firma los certificados y el número desde el que empiezan los contadores.
+                                En esta sección se puede configurar lo que distingue a las OTEC: el logo, el usuario
+                                que firma los certificados y el número desde el que empiezan los contadores.
                             </p>
                             <p>
                                 El certificador es un usuario de la OTEC. Su nombre, su especialidad y su firma se
-                                imprimen en cada certificado, y la sección muestra una vista previa de esos tres datos.
+                                imprimen en los certificados, y la sección muestra una vista previa de esos tres datos.
                             </p>
                             <p>
                                 Los campos <strong>Inicio de contador</strong> e <strong>Inicio de cotizador</strong>
@@ -308,8 +309,9 @@
 
                 <div class="prose-night mt-6">
                     <p>
-                        Al abrir un curso armado desde la sección <strong>Gestionar cursos</strong>, la aplicación
-                        muestra su panel completo, ordenado en las etapas por las que pasa el curso.
+                        Los cursos armados se pueden abrir desde la sección <strong>Gestionar cursos</strong>. La
+                        aplicación muestra entonces su panel completo, ordenado en las etapas por las que pasa el
+                        curso.
                     </p>
                 </div>
 
@@ -322,12 +324,12 @@
                                 las notas de la cotización.
                             </p>
                             <p>
-                                Cada OTEC sube su propia plantilla de cotización en formato
+                                Las OTEC pueden subir su propia plantilla de cotización en formato
                                 <code class="code">.docx</code>. La aplicación la rellena con los datos del curso
                                 armado, la convierte a PDF con LibreOffice y la envía por correo al usuario de
                                 contacto, con copia al vendedor. La cotización también se puede descargar sin enviarla.
-                                Cada envío aumenta en uno el contador de cotizaciones de la OTEC, de manera que el
-                                número de cada cotización no se repite.
+                                Cada envío aumenta en uno el contador de cotizaciones de la OTEC, de manera que los
+                                números de las cotizaciones no se pueden repetir.
                             </p>
                         </div>
                         <figure class="mt-6">
@@ -353,15 +355,15 @@
                     <li class="step">
                         <div class="prose-night">
                             <p>
-                                <strong>Estudiantes.</strong> Los alumnos se inscriben uno a uno o desde un archivo
-                                Excel, con el mismo selector de columnas del resto de la aplicación. Cada inscripción
-                                registra las asistencias, la nota práctica y la nota teórica, que se editan
-                                directamente en la tabla.
+                                <strong>Estudiantes.</strong> Los alumnos se pueden inscribir uno a uno o desde un
+                                archivo Excel, con el mismo selector de columnas del resto de la aplicación. Las
+                                inscripciones registran las asistencias, la nota práctica y la nota teórica, que se
+                                pueden editar directamente en la tabla.
                             </p>
                             <p>
                                 Los campos <strong>Asistencias por defecto</strong>, <strong>Nota práctica por
                                     defecto</strong> y <strong>Nota teórica por defecto</strong> definen los valores
-                                con los que se crea cada inscripción nueva.
+                                con los que se crean las inscripciones nuevas.
                             </p>
                         </div>
                         <figure class="mt-6">
@@ -377,23 +379,23 @@
                     <li class="step">
                         <div class="prose-night">
                             <p>
-                                <strong>Acciones del curso.</strong> Un curso armado tiene tres estados:
+                                <strong>Acciones del curso.</strong> Los cursos armados tienen tres estados:
                                 <code class="code">INACTIVO</code>, <code class="code">ACTIVO</code> y
                                 <code class="code">FINALIZADO</code>.
                             </p>
                             <p>
-                                La aplicación no permite finalizar un curso armado al que le falte la fecha de inicio,
-                                la fecha de finalización, el profesor, el curso o la empresa, ni tampoco si alguna
-                                inscripción no tiene registradas las asistencias y las dos notas. Estos datos se
-                                imprimen en el certificado.
+                                Los cursos armados no se pueden finalizar si les falta la fecha de inicio, la fecha de
+                                finalización, el profesor, el curso o la empresa, ni tampoco si alguna inscripción no
+                                tiene registradas las asistencias y las dos notas. Estos datos se imprimen en el
+                                certificado.
                             </p>
                             <p>
                                 Al finalizar el curso armado, la aplicación asigna los números de certificado
                                 correlativos a los alumnos que alcanzaron las dos notas mínimas y envía por correo el
                                 enlace del certificado a esos alumnos y a los encargados de la empresa. La asignación
                                 de los números se hace dentro de una transacción de la base de datos, de manera que dos
-                                cursos armados finalizados al mismo tiempo no asignen el mismo número a dos alumnos
-                                distintos.
+                                cursos armados finalizados al mismo tiempo no puedan asignar el mismo número a dos
+                                alumnos distintos.
                             </p>
                         </div>
                     </li>
@@ -403,7 +405,7 @@
                             <p>
                                 <strong>Registros del curso.</strong> Este apartado muestra las respuestas de las dos
                                 encuestas de satisfacción y una tabla con las asistencias y las notas de los alumnos.
-                                Las tablas calculan la suma y el promedio de cada columna.
+                                Las tablas calculan la suma y el promedio de sus columnas.
                             </p>
                         </div>
                         <figure class="mt-6">
@@ -426,23 +428,23 @@
 
                 <div class="prose-night mt-6">
                     <p>
-                        El profesor y el alumno no entran al panel de administración. Cada uno tiene su propia
-                        pantalla, con los cursos que le corresponden.
+                        El profesor y el alumno no pueden entrar al panel de administración. Los dos tienen su propia
+                        pantalla, con los cursos que les corresponden.
                     </p>
                     <p>
                         El panel del profesor muestra los cursos armados en los que está asignado como profesor. Desde
-                        ahí registra las asistencias y las notas de cada alumno, inicia y termina la clase, y finaliza
-                        el curso.
+                        ahí puede registrar las asistencias y las notas de los alumnos, iniciar y terminar la clase, y
+                        finalizar el curso.
                     </p>
                     <p>
                         El panel del alumno muestra los cursos en los que está inscrito, con su estado, sus fechas, el
-                        nombre del profesor y el temario. El botón <strong>Marcar asistencia</strong> se habilita
-                        mientras el profesor mantiene la clase iniciada; cuando el profesor la termina, la aplicación
-                        desmarca las asistencias de ese curso armado.
+                        nombre del profesor y el temario. El botón <strong>Marcar asistencia</strong> solo se puede
+                        usar mientras el profesor mantiene la clase iniciada; cuando el profesor la termina, la
+                        aplicación desmarca las asistencias de ese curso armado.
                     </p>
                     <p>
                         La sección <strong>Certificados</strong> del alumno lista los cursos que finalizaron y que él
-                        aprobó, con un enlace al certificado de cada uno.
+                        aprobó, con un enlace a cada certificado.
                     </p>
                 </div>
 
@@ -450,7 +452,7 @@
                     <a class="media" href="../../../assets/images/otec/panel-profesor.png">
                         <img src="../../../assets/images/otec/panel-profesor.png" width="3200" height="1900"
                             loading="lazy" decoding="async"
-                            alt="Panel del profesor con sus dos cursos armados, los alumnos de cada uno, los campos de asistencias y notas y los botones Terminar clase y Finalizar curso">
+                            alt="Panel del profesor con sus dos cursos armados, los alumnos de los dos, los campos de asistencias y notas y los botones Terminar clase y Finalizar curso">
                     </a>
                     <figcaption class="caption">Panel del profesor</figcaption>
                 </figure>
@@ -462,8 +464,8 @@
                             alt="Panel del alumno con sus tres cursos, el estado de cada uno, el temario y el botón Marcar asistencia, habilitado únicamente en el curso que está en clase">
                     </a>
                     <figcaption class="caption">
-                        Panel del alumno. El botón <strong>Marcar asistencia</strong> está habilitado únicamente en el
-                        curso que está en clase.
+                        Panel del alumno. El botón <strong>Marcar asistencia</strong> solo se puede usar en el curso
+                        que está en clase.
                     </figcaption>
                 </figure>
             </div>
@@ -479,7 +481,7 @@
                         El certificado es una página web que la aplicación arma en el momento con los datos del curso
                         armado y de la inscripción. Su dirección es pública y está formada por dos identificadores: el
                         del alumno y el del curso armado. Los dos son UUID generados por la base de datos, por lo tanto
-                        la dirección se abre sin cuenta pero no se puede deducir.
+                        la dirección se puede abrir sin cuenta, pero no se puede deducir.
                     </p>
                     <p>
                         La página muestra el certificado solo si el curso armado está en estado
@@ -499,7 +501,7 @@
                         El PDF lo genera el servidor: abre la misma dirección con Puppeteer, espera a que terminen de
                         cargar las imágenes e imprime la página en A4 horizontal. La aplicación tiene dos diseños de
                         certificado y usa el que corresponde a la OTEC del curso armado. La página también tiene un
-                        botón <strong>Modo oscuro</strong>, que cambia el certificado a fondo negro.
+                        botón <strong>Modo oscuro</strong>, que permite cambiar el certificado a fondo negro.
                     </p>
                 </div>
 
@@ -521,20 +523,20 @@
 
                 <div class="prose-night mt-6">
                     <p>
-                        Cada OTEC arma sus propias encuestas desde el panel. Una pregunta puede ser de tipo
+                        Las OTEC pueden armar sus propias encuestas desde el panel. Las preguntas pueden ser de tipo
                         <strong>Texto</strong>, que se responde en un campo libre, o de tipo <strong>Rango</strong>,
-                        que se responde eligiendo un número dentro de un intervalo. Cada pregunta se marca como
-                        obligatoria o no.
+                        que se responde eligiendo un número dentro de un intervalo, y se pueden marcar como
+                        obligatorias o no.
                     </p>
                     <p>
                         Hay dos encuestas: la encuesta del estudiante, que responde el alumno inscrito, y la encuesta
-                        del cliente, que responde el usuario de contacto de la empresa. Las dos se envían por correo
-                        desde el apartado <strong>Acciones del curso</strong> del curso armado.
+                        del cliente, que responde el usuario de contacto de la empresa. Las dos se pueden enviar por
+                        correo desde el apartado <strong>Acciones del curso</strong> del curso armado.
                     </p>
                     <p>
-                        Las encuestas se responden desde un enlace público, sin cuenta. Si el enlace se vuelve a abrir
-                        después de haber respondido, la página indica que la encuesta ya fue respondida. Las respuestas
-                        aparecen en el apartado <strong>Registros del curso</strong>.
+                        Las encuestas se pueden responder desde un enlace público, sin cuenta. Si el enlace se vuelve a
+                        abrir después de haber respondido, la página indica que la encuesta ya fue respondida. Las
+                        respuestas aparecen en el apartado <strong>Registros del curso</strong>.
                     </p>
                 </div>
 
@@ -556,15 +558,15 @@
 
                 <div class="prose-night mt-6">
                     <p>
-                        Usé Socket.IO para que los cambios se reflejen en todas las pantallas abiertas sin recargar la
-                        página. Cuando un usuario crea, edita o elimina un usuario, una empresa, un curso, un curso
+                        Usé Socket.IO para que los cambios se puedan ver en todas las pantallas abiertas sin recargar
+                        la página. Cuando un usuario crea, edita o elimina un usuario, una empresa, un curso, un curso
                         armado, una inscripción o los parámetros, el resto de los usuarios conectados a esa OTEC recibe
                         el aviso y vuelve a cargar los datos afectados.
                     </p>
                     <p>
-                        Cada OTEC es una sala distinta del servidor, de manera que los avisos de una no llegan a las
-                        demás. La parte superior del panel muestra los correos de los usuarios conectados a esa OTEC en
-                        ese momento.
+                        Las OTEC son salas distintas del servidor, de manera que los avisos de una no pueden llegar a
+                        las demás. La parte superior del panel muestra los correos de los usuarios conectados a esa
+                        OTEC en ese momento.
                     </p>
                     <p>
                         La página del certificado se suscribe a los avisos de su curso armado: si una nota cambia
@@ -614,9 +616,10 @@
                     <article class="item-card">
                         <h4>Permisos</h4>
                         <p>
-                            Todas las rutas del backend exigen sesión, y las públicas se marcan de forma explícita una
-                            por una. Además de la sesión hay un control de roles por OTEC, que lee la OTEC activa de
-                            una cabecera de la petición, y otro que impide editar el perfil de otro usuario.
+                            Las rutas del backend solo se pueden usar con sesión iniciada, y las públicas se marcan de
+                            forma explícita una por una. Además de la sesión hay un control de roles por OTEC, que lee
+                            la OTEC activa de una cabecera de la petición, y otro que impide editar el perfil de otro
+                            usuario.
                         </p>
                     </article>
                 </div>
@@ -627,7 +630,7 @@
                         devuelven en español.
                     </p>
                     <p>
-                        Cada registro tiene su identificador interno en la base de datos y, además, un número propio
+                        Los registros tienen su identificador interno en la base de datos y, además, un número propio
                         dentro de su OTEC que empieza en 1. Ese segundo número es el que muestran las tarjetas y las
                         tablas del panel.
                     </p>

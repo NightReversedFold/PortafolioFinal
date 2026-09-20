@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma OTEC | Night</title>
+    <meta name="description"
+        content="Plataforma OTEC: aplicación web para organismos de capacitación, hecha con React y NestJS; cotizaciones, cursos, certificados, encuestas y tiempo real.">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Night | Portafolio">
+    <meta property="og:title" content="Plataforma OTEC | Night">
+    <meta property="og:description"
+        content="Aplicación web para organismos de capacitación: cotizaciones, cursos, certificados y encuestas, con React y NestJS.">
+    <meta property="og:image" content="https://nightreversedfold.github.io/PortafolioFinal/assets/images/thumbs/otec.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../assets/images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="../../../assets/images/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="../../../assets/css/output.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <nav class="container-page flex h-16 items-center justify-between gap-4" aria-label="Principal">
+            <a href="../../../index.html" class="brand" title="Ventana principal">Night</a>
+            <ul class="flex items-center gap-x-4 sm:gap-x-7">
+                <li><a class="nav-link" href="../../../index.html#MyStuffLol">Proyectos</a></li>
+                <li><a class="nav-link" href="../../../index.html#LaboralExperience">Experiencia</a></li>
+                <li><button type="button" class="nav-link" data-discord>Contáctame</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" class="container-page max-w-5xl pt-8">
+        <nav class="breadcrumb" aria-label="Ruta">
+            <ol>
+                <li><a href="../../../index.html">Ventana principal</a></li>
+                <li><a href="../../../index.html#MyStuffLol">Proyectos</a></li>
+                <li aria-current="page">Plataforma OTEC</li>
+            </ol>
+        </nav>
+
+        <header class="page-hero panel">
+            <p class="eyebrow">TypeScript · Aplicación web</p>
+            <h1 class="page-title">Plataforma OTEC</h1>
+            <p class="page-intro">
+                Es un proyecto privado que hice para un cliente, así que no puedo compartir el código ni la página;
+                por eso esta documentación es solo con capturas.
+            </p>
+        </header>
+
+        <nav class="toc" aria-label="En esta página">
+            <a href="#roles">Roles y cuentas</a>
+            <a href="#administracion">Administración</a>
+            <a href="#ciclo">Ciclo de un curso</a>
+            <a href="#paneles">Profesor y alumno</a>
+            <a href="#certificados">Certificados</a>
+            <a href="#encuestas">Encuestas</a>
+            <a href="#tiempo-real">Tiempo real</a>
+            <a href="#tecnologias">Cómo está hecho</a>
+        </nav>
+
+        <!-- Qué es -->
+        <section class="article" aria-label="Qué es la plataforma OTEC">
+            <div class="prose-night mx-auto">
+                <p>
+                    Una <strong>OTEC</strong> es un Organismo Técnico de Capacitación: una empresa que dicta cursos a
+                    los trabajadores de otras empresas y les entrega un certificado al terminarlos. Esta aplicación web
+                    cubre todo ese proceso de principio a fin: cotizarle el curso a la empresa, armar el curso,
+                    inscribir a los alumnos, llevar la asistencia y las notas, finalizarlo, entregar los certificados y
+                    mandar las encuestas de satisfacción.
+                </p>
+                <p>
+                    Antes de esto, la OTEC llevaba todo en planillas de Excel sueltas y documentos de Word que había que
+                    rellenar a mano uno por uno, así que la idea era juntar todo en un solo lugar y que las partes
+                    repetitivas se hicieran solas.
+                </p>
+                <p>
+                    La aplicación es <strong>multiempresa</strong>: en la misma instalación pueden convivir varias OTEC,
+                    y cada una tiene sus propios usuarios, empresas, cursos, logo, certificador y numeración, sin ver
+                    nada de las demás.
+                </p>
+            </div>
+
+            <div class="prose-night mx-auto mt-10 rounded-lg border border-line bg-night p-5 sm:p-6">
+                <p class="text-sm">
+                    Todas las capturas de esta página están sacadas de una instalación de prueba con datos inventados
+                    por mí, para no mostrar información real de la OTEC, de sus empresas ni de sus alumnos.
+                </p>
+            </div>
+        </section>
+
+        <!-- Roles y cuentas -->
+        <section id="roles" class="article">
+            <div class="mx-auto max-w-4xl">
+                <h2 class="article-title">Roles y cuentas</h2>
+
+                <div class="prose-night mt-6">
+                    <p>
+                        Nadie se registra por su cuenta. El administrador crea a la persona dentro de la OTEC y esa
+                        persona activa su cuenta con su correo: elige su contraseña, le llega un enlace de confirmación
+                        y recién ahí la cuenta queda activa. También hay recuperación de contraseña por correo.
+                    </p>
+                    <p>
+                        Una misma persona puede tener varios roles a la vez y estar en más de una OTEC, así que el menú
+                        lateral se arma según lo que esa persona realmente puede hacer.
+                    </p>
+                </div>
+
+                <dl class="mt-10 grid gap-4 md:grid-cols-2">
+                    <div class="rounded-lg border border-line bg-night p-5 sm:p-6">
+                        <dt><code class="code">ALUMNO</code></dt>
+                        <dd class="mt-3 leading-relaxed text-neutral-300">
+                            Ve los cursos en los que está inscrito, el temario, marca su asistencia y descarga sus
+                            certificados.
+                        </dd>
+                    </div>
+                    <div class="rounded-lg border border-line bg-night p-5 sm:p-6">
+                        <dt><code class="code">PROFESOR</code></dt>
+                        <dd class="mt-3 leading-relaxed text-neutral-300">
+                            Abre y cierra la clase, pone las asistencias y las notas de sus cursos, y los finaliza.
+                        </dd>
+                    </div>
+                    <div class="rounded-lg border border-line bg-night p-5 sm:p-6">
+                        <dt><code class="code">EMPRESA</code></dt>
+                        <dd class="mt-3 leading-relaxed text-neutral-300">
+                            El cliente: revisa los cursos que la OTEC le dictó a su empresa y cómo le fue a su gente.
+                        </dd>
+                    </div>
+                    <div class="rounded-lg border border-line bg-night p-5 sm:p-6">
+                        <dt><code class="code">ADMINISTRADOREMPRESA</code></dt>
+                        <dd class="mt-3 leading-relaxed text-neutral-300">
+                            Quien maneja la OTEC por dentro: usuarios, empresas, cursos, cotizaciones y parámetros.
+                        </dd>
+                    </div>
+                    <div class="rounded-lg border border-line bg-night p-5 sm:p-6 md:col-span-2">
+                        <dt><code class="code">ADMINISTRADOR</code></dt>
+                        <dd class="mt-3 leading-relaxed text-neutral-300">
+                            El rol global. Puede entrar a cualquier OTEC, crear suscripciones nuevas y vincular personas
+                            a ellas.
+                        </dd>
+                    </div>
+                </dl>
+
+                <figure class="mt-12">
+                    <a class="media" href="../../../assets/images/otec/login.jpg">
+                        <img src="../../../assets/images/otec/login.jpg" width="2400" height="1425" loading="lazy"
+                            decoding="async"
+                            alt="Pantalla de inicio de sesión con el formulario de correo y contraseña, y enlaces para activar la cuenta o recuperar la contraseña">
+                    </a>
+                    <figcaption class="caption">Inicio de sesión</figcaption>
+                </figure>
+
+                <figure class="mt-10">
+                    <a class="media" href="../../../assets/images/otec/perfil.png">
+                        <img src="../../../assets/images/otec/perfil.png" width="3200" height="1900" loading="lazy"
+                            decoding="async"
+                            alt="Pantalla de perfil con foto, firma, datos personales, roles y la sección de seguridad para cambiar la contraseña">
+                    </a>
+                    <figcaption class="caption">
+                        El perfil propio. La foto y la firma se suben a un almacenamiento externo compatible con S3.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Administración -->
+        <section id="administracion" class="article">
+            <div class="mx-auto max-w-4xl">
+                <h2 class="article-title">Administración de la OTEC</h2>
+
+                <div class="prose-night mt-6">
+                    <p>
+                        Es el panel donde vive casi todo. Está dividido en secciones: los cursos que se están dictando,
+                        las personas, las empresas clientes, el catálogo de cursos, los reportes y los parámetros de la
+                        OTEC.
+                    </p>
+                </div>
+
+                <div class="mt-12 space-y-16">
+                    <section>
+                        <h3 class="article-subtitle">Gestionar cursos</h3>
+                        <div class="prose-night mt-4">
+                            <p>
+                                Cada tarjeta es un curso que se le está dictando a una empresa en unas fechas
+                                concretas. Se puede buscar por ID, nombre o empresa, ordenar de catorce maneras
+                                distintas y seleccionar varios para borrarlos de una sola vez. El estado y si está
+                                cotizado o no se ven de un vistazo por el color.
+                            </p>
+                        </div>
+                        <figure class="mt-6">
+                            <a class="media" href="../../../assets/images/otec/panel-cursos.png">
+                                <img src="../../../assets/images/otec/panel-cursos.png" width="3200" height="1900"
+                                    loading="lazy" decoding="async"
+                                    alt="Sección Gestionar cursos con cuatro tarjetas de cursos, cada una con su empresa, estado, si está cotizado, fecha y cantidad de alumnos">
+                            </a>
+                        </figure>
+                    </section>
+
+                    <section>
+                        <h3 class="article-subtitle">Usuarios, empresas y catálogo de cursos</h3>
+                        <div class="prose-night mt-4">
+                            <p>
+                                Las tres secciones funcionan igual: buscador, ordenamiento, selección múltiple y un
+                                panel lateral para editar. Lo más útil es que las tres aceptan
+                                <strong>importar desde Excel</strong>: se arrastra el archivo, la aplicación lee las
+                                columnas que trae y uno le dice qué columna corresponde a cada campo, porque cada
+                                planilla que llega viene con nombres distintos.
+                            </p>
+                            <p>
+                                Al terminar la importación sale un reporte con las filas que no se pudieron crear y el
+                                motivo (RUT repetido, correo inválido, fila vacía, etc.), en vez de fallar en silencio
+                                o cortar todo el archivo por una fila mala.
+                            </p>
+                        </div>
+                        <figure class="mt-6">
+                            <a class="media" href="../../../assets/images/otec/panel-usuarios.png">
+                                <img src="../../../assets/images/otec/panel-usuarios.png" width="3200" height="1900"
+                                    loading="lazy" decoding="async"
+                                    alt="Sección Usuarios con la zona para importar desde Excel y las tarjetas de los seis usuarios con su ID, correo y RUT">
+                            </a>
+                            <figcaption class="caption">Usuarios</figcaption>
+                        </figure>
+                        <div class="mt-8 grid gap-6 lg:grid-cols-2">
+                            <figure>
+                                <a class="media" href="../../../assets/images/otec/panel-empresas.png">
+                                    <img src="../../../assets/images/otec/panel-empresas.png" width="3200"
+                                        height="1900" loading="lazy" decoding="async"
+                                        alt="Sección Empresas con cuatro empresas clientes, cada una con su ID y su RUT">
+                                </a>
+                                <figcaption class="caption">Empresas clientes</figcaption>
+                            </figure>
+                            <figure>
+                                <a class="media" href="../../../assets/images/otec/panel-catalogo.png">
+                                    <img src="../../../assets/images/otec/panel-catalogo.png" width="3200"
+                                        height="1900" loading="lazy" decoding="async"
+                                        alt="Sección Cursos con el catálogo de cuatro cursos y la duración en horas de cada uno">
+                                </a>
+                                <figcaption class="caption">Catálogo de cursos</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="article-subtitle">Reportes de cursos</h3>
+                        <div class="prose-night mt-4">
+                            <p>
+                                Una tabla con todos los cursos y filtros por fecha de inicio, fecha de finalización,
+                                estado, si fue cotizado, empresa, profesor y curso. Es la vista que se usa para
+                                responder preguntas del tipo «qué le dictamos a esta empresa el año pasado».
+                            </p>
+                        </div>
+                        <figure class="mt-6">
+                            <a class="media" href="../../../assets/images/otec/panel-reportes.png">
+                                <img src="../../../assets/images/otec/panel-reportes.png" width="3200" height="1900"
+                                    loading="lazy" decoding="async"
+                                    alt="Sección Reportes de cursos con el bloque de filtros abierto y la tabla de cursos con empresa, profesor, fechas, alumnos, estado y si está cotizado">
+                            </a>
+                        </figure>
+                    </section>
+
+                    <section>
+                        <h3 class="article-subtitle">Parámetros</h3>
+                        <div class="prose-night mt-4">
+                            <p>
+                                Lo que cambia de una OTEC a otra: el logo, quién firma los certificados (con su firma y
+                                su especialidad, que salen impresas en el certificado) y desde qué número arrancan los
+                                contadores.
+                            </p>
+                            <p>
+                                Los contadores son importantes porque la OTEC ya venía numerando sus certificados y sus
+                                cotizaciones a mano desde antes: poniendo el último número que usaron, la aplicación
+                                sigue la cuenta desde ahí en vez de empezar de cero.
+                            </p>
+                        </div>
+                        <figure class="mt-6">
+                            <a class="media" href="../../../assets/images/otec/panel-parametros.png">
+                                <img src="../../../assets/images/otec/panel-parametros.png" width="3200" height="1900"
+                                    loading="lazy" decoding="async"
+                                    alt="Sección Parámetros con la carga del logo, el selector de certificador, el inicio de los contadores y una vista previa del certificador">
+                            </a>
+                        </figure>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ciclo de un curso -->
+        <section id="ciclo" class="article">
+            <div class="mx-auto max-w-4xl">
+                <h2 class="article-title">El ciclo de un curso</h2>
+
+                <div class="prose-night mt-6">
+                    <p>
+                        Al entrar a un curso se abre su panel completo, que está ordenado en el mismo orden en el que
+                        pasan las cosas en la vida real: primero se cotiza, después se arma, después se dicta y al final
+                        se cierra.
+                    </p>
+                </div>
+
+                <ol class="steps mt-12 ml-4">
+                    <li class="step">
+                        <div class="prose-night">
+                            <p>
+                                <strong>Cotización.</strong> Se elige la empresa, el curso del catálogo, el contacto de
+                                la empresa, el vendedor, cuántos alumnos se cotizan y el valor por alumno.
+                            </p>
+                            <p>
+                                Cada OTEC sube su propia plantilla de cotización en <code class="code">.docx</code> con
+                                su diseño y sus marcadores. La aplicación la rellena con los datos del curso, la
+                                convierte a PDF y la manda por correo al contacto de la empresa con copia al vendedor,
+                                todo desde el mismo botón. Cada cotización enviada avanza el contador, así que los
+                                números nunca se repiten.
+                            </p>
+                        </div>
+                        <figure class="mt-6">
+                            <a class="media" href="../../../assets/images/otec/curso-cotizacion.png">
+                                <img src="../../../assets/images/otec/curso-cotizacion.png" width="3200" height="1900"
+                                    loading="lazy" decoding="async"
+                                    alt="Panel de cotización de un curso con los campos de empresa, curso, usuario de contacto, vendedor, alumnos cotizados, valor unitario y notas">
+                            </a>
+                        </figure>
+                    </li>
+
+                    <li class="step">
+                        <div class="prose-night">
+                            <p>
+                                <strong>Inicio de curso.</strong> Las fechas, el profesor que lo va a dictar, el lugar
+                                y las dos notas mínimas para aprobar: la teórica y la práctica.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="step">
+                        <div class="prose-night">
+                            <p>
+                                <strong>Estudiantes.</strong> Se inscriben los alumnos, uno por uno o cargando una
+                                planilla de Excel con el mismo mapeo de columnas del resto de la aplicación. Cada
+                                inscripción lleva asistencia, nota práctica y nota teórica, que se pueden editar
+                                directamente en la tabla.
+                            </p>
+                            <p>
+                                También hay valores por defecto: si a todo el curso le corresponde 100% de asistencia,
+                                se deja puesto y los alumnos nuevos entran ya con ese valor.
+                            </p>
+                        </div>
+                        <figure class="mt-6">
+                            <a class="media" href="../../../assets/images/otec/curso-estudiantes.png">
+                                <img src="../../../assets/images/otec/curso-estudiantes.png" width="3200" height="1900"
+                                    loading="lazy" decoding="async"
+                                    alt="Tabla de estudiantes inscritos con sus asistencias, nota práctica y nota teórica editables, y debajo las acciones del curso">
+                            </a>
+                        </figure>
+                    </li>
+
+                    <li class="step">
+                        <div class="prose-night">
+                            <p>
+                                <strong>Acciones del curso.</strong> Un curso pasa por tres estados:
+                                <code class="code">INACTIVO</code>, <code class="code">ACTIVO</code> y
+                                <code class="code">FINALIZADO</code>. No se deja finalizar un curso al que le falten
+                                datos (sin profesor, sin fechas o sin alumnos), porque después esos datos salen
+                                impresos en el certificado.
+                            </p>
+                            <p>
+                                Al finalizarlo, la aplicación reparte los números de certificado correlativos entre los
+                                alumnos que aprobaron las dos notas y le avisa por correo a cada uno con el enlace a su
+                                certificado. Los números se reparten dentro de una transacción, para que dos personas
+                                finalizando cursos al mismo tiempo no terminen dándole el mismo número a dos alumnos
+                                distintos.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="step">
+                        <div class="prose-night">
+                            <p>
+                                <strong>Registros del curso.</strong> Al final del panel quedan las respuestas de las
+                                encuestas de satisfacción y un resumen de las asistencias y notas, con sumas y
+                                promedios calculados solos.
+                            </p>
+                        </div>
+                        <figure class="mt-6">
+                            <a class="media" href="../../../assets/images/otec/curso-registros.png">
+                                <img src="../../../assets/images/otec/curso-registros.png" width="3200" height="1900"
+                                    loading="lazy" decoding="async"
+                                    alt="Registros del curso: tabla con las respuestas de la encuesta del cliente y tabla resumen de los estudiantes con sumas y promedios de asistencias y notas">
+                            </a>
+                        </figure>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Paneles de profesor y alumno -->
+        <section id="paneles" class="article">
+            <div class="mx-auto max-w-4xl">
+                <h2 class="article-title">Los paneles del profesor y del alumno</h2>
+
+                <div class="prose-night mt-6">
+                    <p>
+                        El profesor y el alumno no entran al panel de administración; cada uno tiene su propia pantalla,
+                        mucho más chica, con solo lo que le toca hacer.
+                    </p>
+                    <p>
+                        El profesor ve únicamente los cursos que él dicta y puede poner las asistencias y las notas de
+                        sus alumnos, abrir la clase y finalizar el curso. Cuando abre la clase, a los alumnos de ese
+                        curso les aparece habilitado el botón para marcar su propia asistencia, y se les deshabilita
+                        cuando la cierra.
+                    </p>
+                </div>
+
+                <figure class="mt-10">
+                    <a class="media" href="../../../assets/images/otec/panel-profesor.png">
+                        <img src="../../../assets/images/otec/panel-profesor.png" width="3200" height="1900"
+                            loading="lazy" decoding="async"
+                            alt="Panel del profesor con sus dos cursos, los alumnos de cada uno y los campos de asistencias y notas, más los botones para terminar la clase y finalizar el curso">
+                    </a>
+                    <figcaption class="caption">Panel del profesor</figcaption>
+                </figure>
+
+                <figure class="mt-10">
+                    <a class="media" href="../../../assets/images/otec/panel-alumno.png">
+                        <img src="../../../assets/images/otec/panel-alumno.png" width="3200" height="1900"
+                            loading="lazy" decoding="async"
+                            alt="Panel del alumno con sus tres cursos, el estado de cada uno, el temario y el botón para marcar asistencia, habilitado solo en el curso que está en clase">
+                    </a>
+                    <figcaption class="caption">
+                        Panel del alumno. Solo el curso que está en clase tiene el botón de asistencia habilitado.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Certificados -->
+        <section id="certificados" class="article">
+            <div class="mx-auto max-w-4xl">
+                <h2 class="article-title">Certificados</h2>
+
+                <div class="prose-night mt-6">
+                    <p>
+                        El certificado no es una imagen guardada en ninguna parte: es una página web que se arma en el
+                        momento con los datos reales del curso y del alumno. Vive en una dirección pública formada por
+                        dos tokens, uno del alumno y otro del curso, así que cualquiera con el enlace puede verlo y
+                        comprobarlo sin tener cuenta, pero nadie puede adivinar el de otra persona.
+                    </p>
+                    <p>
+                        La página solo muestra el certificado si el curso está finalizado y si el alumno aprobó las dos
+                        notas mínimas; si no, responde que no está disponible. Como se arma en el momento, si después se
+                        corrige una nota el certificado queda corregido también.
+                    </p>
+                    <p>
+                        Lleva su número correlativo, el nombre y el RUT del alumno, las fechas, el porcentaje de
+                        asistencia, las dos notas, la firma del certificador y un código QR que apunta a esa misma
+                        página, para poder verificarlo desde el papel. Atrás va el temario completo del curso y la firma
+                        del relator.
+                    </p>
+                    <p>
+                        Para descargarlo en PDF, el servidor abre esa misma página con un navegador sin interfaz
+                        (Puppeteer), espera a que carguen las imágenes y la imprime en A4 horizontal. Así el PDF y la
+                        página siempre se ven idénticos, porque literalmente son lo mismo. Además hay dos diseños
+                        distintos de certificado, y la aplicación elige cuál usar según la OTEC a la que pertenece el
+                        curso.
+                    </p>
+                </div>
+
+                <figure class="mt-10">
+                    <a class="media" href="../../../assets/images/otec/certificado.png">
+                        <img src="../../../assets/images/otec/certificado.png" width="2244" height="1588"
+                            loading="lazy" decoding="async"
+                            alt="Certificado de curso generado por la aplicación, con el número correlativo, el nombre y RUT del alumno, las fechas, el temario resumido, el código QR, las notas y la firma del certificador">
+                    </a>
+                    <figcaption class="caption">
+                        La cara principal del certificado. Los datos son de prueba.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Encuestas -->
+        <section id="encuestas" class="article">
+            <div class="mx-auto max-w-4xl">
+                <h2 class="article-title">Encuestas de satisfacción</h2>
+
+                <div class="prose-night mt-6">
+                    <p>
+                        Las OTEC tienen que medir la satisfacción de sus cursos, y cada una pregunta cosas distintas.
+                        En vez de dejar las preguntas escritas en el código, hice un constructor de encuestas dentro
+                        del panel: se agregan preguntas, se elige si son de texto libre o de rango (del 1 al 5, por
+                        ejemplo) y si son obligatorias.
+                    </p>
+                    <p>
+                        Hay dos encuestas separadas: una para el participante, que la responde el alumno, y otra para
+                        el cliente, que la responde el contacto de la empresa. Ambas se mandan por correo desde el
+                        panel del curso con un botón.
+                    </p>
+                    <p>
+                        Se responden desde un enlace público, sin cuenta y una sola vez: si alguien vuelve a entrar,
+                        la página le dice que ya respondió. Las respuestas caen directo en los registros del curso, con
+                        sus sumas y promedios.
+                    </p>
+                </div>
+
+                <figure class="mt-10">
+                    <a class="media" href="../../../assets/images/otec/encuesta.png">
+                        <img src="../../../assets/images/otec/encuesta.png" width="3200" height="1900" loading="lazy"
+                            decoding="async"
+                            alt="Encuesta de satisfacción del participante con tres preguntas de rango del 1 al 5 ya contestadas y una pregunta de texto libre">
+                    </a>
+                    <figcaption class="caption">La encuesta como la ve el alumno desde el enlace del correo</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Tiempo real -->
+        <section id="tiempo-real" class="article">
+            <div class="mx-auto max-w-3xl">
+                <h2 class="article-title">Tiempo real</h2>
+
+                <div class="prose-night mt-6">
+                    <p>
+                        En la OTEC hay varias personas trabajando sobre los mismos cursos al mismo tiempo, así que usé
+                        Socket.IO para que todo se actualice solo. Cuando alguien crea, edita o borra algo, al resto de
+                        la gente que está dentro de esa misma OTEC le cambia la pantalla al instante, sin recargar.
+                    </p>
+                    <p>
+                        Cada OTEC es una sala distinta, así que los avisos no se cruzan entre una y otra. Arriba del
+                        panel también se ve quién está conectado en ese momento, para saber con quién se está
+                        compartiendo el trabajo.
+                    </p>
+                    <p>
+                        Los certificados también escuchan: si el profesor corrige una nota mientras un alumno tiene su
+                        certificado abierto, el certificado se vuelve a armar solo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cómo está hecho -->
+        <section id="tecnologias" class="article">
+            <div class="mx-auto max-w-4xl">
+                <h2 class="article-title">Cómo está hecho</h2>
+
+                <div class="prose-night mt-6">
+                    <p>
+                        Son dos proyectos separados, los dos en TypeScript: el frontend y el backend.
+                    </p>
+                </div>
+
+                <div class="mt-10 grid gap-4 md:grid-cols-2">
+                    <article class="item-card">
+                        <h4>Frontend</h4>
+                        <p>
+                            React 19 con Vite y Tailwind CSS 4. React Router para las rutas, Zustand para saber en qué
+                            OTEC se está trabajando, Socket.IO para el tiempo real y SheetJS para leer las planillas de
+                            Excel en el navegador.
+                        </p>
+                    </article>
+                    <article class="item-card">
+                        <h4>Backend</h4>
+                        <p>
+                            NestJS 11 con PostgreSQL y TypeORM. Autenticación con JWT y Passport, contraseñas con
+                            bcrypt, Socket.IO para los avisos, almacenamiento compatible con S3 para las imágenes y la
+                            API de Gmail para los correos.
+                        </p>
+                    </article>
+                    <article class="item-card">
+                        <h4>Documentos</h4>
+                        <p>
+                            Docxtemplater rellena la plantilla <code class="code">.docx</code> de la cotización y
+                            LibreOffice la pasa a PDF; Puppeteer imprime los certificados abriendo la misma página que
+                            ve el alumno.
+                        </p>
+                    </article>
+                    <article class="item-card">
+                        <h4>Permisos</h4>
+                        <p>
+                            Todas las rutas del backend piden sesión por defecto y hay que marcarlas a mano como
+                            públicas. Encima de eso van los permisos por rol dentro de cada OTEC y uno extra para que
+                            nadie pueda editar el perfil de otra persona.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="prose-night mx-auto mt-10">
+                    <p>
+                        Todo lo que llega al servidor se valida antes de tocar la base de datos, y los errores se
+                        traducen a mensajes en español, porque los usa gente que no es técnica: en vez de un error de
+                        base de datos, ve «Ya existe un usuario con ese correo».
+                    </p>
+                    <p>
+                        Los identificadores también están pensados para eso. Por dentro cada cosa tiene su ID real de
+                        la base de datos, pero cada OTEC ve su propia numeración empezando desde el 1, así que hablan
+                        del «curso 12» y no de un número gigante que no les dice nada.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-page flex flex-col items-center gap-3 py-10 text-center">
+            <p class="font-primary text-ink">@NightDaFold</p>
+            <a href="../../../index.html#MyStuffLol" class="text-sm text-dim transition-colors hover:text-blue-400">←
+                Volver a los proyectos</a>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="../../../assets/js/ButtonHandler.js" defer></script>
+    <script src="../../../assets/js/ImageHandler.js" defer></script>
+</body>
+
+</html>
